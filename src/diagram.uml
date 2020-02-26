@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="0.0" y="158.0">webobjects.SignIn.SelectAccountPage</node>
+    <node x="348.99999999999994" y="158.0">webobjects.SignIn.VerifyIdentityPage</node>
+    <node x="726.0" y="158.0">webobjects.MainApplication.MainMenuPage</node>
+    <node x="869.0530303030303" y="79.0">webobjects.MainApplicationPage</node>
+    <node x="541.0" y="158.0">webobjects.SignIn.EnterPasswordPage</node>
+    <node x="876.0" y="158.0">webobjects.MainApplication.TrialHasEndedPage</node>
+    <node x="1061.0" y="158.0">webobjects.MainApplication.GetStartedPage</node>
+    <node x="567.5" y="0.0">framework.WebPage</node>
+    <node x="287.99999999999994" y="79.0">webobjects.SignInPage</node>
+    <node x="184.99999999999994" y="158.0">webobjects.SignIn.EnterEmailPage</node>
+    <node x="750.5" y="237.0">webobjects.MainApplication.MainMenu.IdentityAndAccess.Users</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="webobjects.MainApplication.GetStartedPage" target="webobjects.MainApplicationPage">
+      <point x="0.0" y="-14.5" />
+      <point x="1133.0" y="138.0" />
+      <point x="1018.2196969696969" y="138.0" />
+      <point x="59.66666666666663" y="14.5" />
+    </edge>
+    <edge source="webobjects.MainApplication.MainMenuPage" target="webobjects.MainApplicationPage">
+      <point x="0.0" y="-14.5" />
+      <point x="791.0" y="138.0" />
+      <point x="898.8863636363636" y="138.0" />
+      <point x="-59.66666666666666" y="14.5" />
+    </edge>
+    <edge source="webobjects.SignIn.EnterEmailPage" target="webobjects.SignInPage">
+      <point x="0.0" y="-14.5" />
+      <point x="256.99999999999994" y="138.0" />
+      <point x="331.49999999999994" y="138.0" />
+      <point x="-14.5" y="14.5" />
+    </edge>
+    <edge source="webobjects.SignIn.EnterPasswordPage" target="webobjects.SignInPage">
+      <point x="0.0" y="-14.5" />
+      <point x="623.5" y="128.0" />
+      <point x="389.49999999999994" y="128.0" />
+      <point x="43.5" y="14.5" />
+    </edge>
+    <edge source="webobjects.SignIn.SelectAccountPage" target="webobjects.SignInPage">
+      <point x="0.0" y="-14.5" />
+      <point x="82.5" y="128.0" />
+      <point x="302.49999999999994" y="128.0" />
+      <point x="-43.5" y="14.5" />
+    </edge>
+    <edge source="webobjects.MainApplicationPage" target="framework.WebPage">
+      <point x="0.0" y="-14.5" />
+      <point x="958.5530303030303" y="54.0" />
+      <point x="638.75" y="54.0" />
+      <point x="23.75" y="14.5" />
+    </edge>
+    <edge source="webobjects.SignInPage" target="framework.WebPage">
+      <point x="0.0" y="-14.5" />
+      <point x="345.99999999999994" y="54.0" />
+      <point x="591.25" y="54.0" />
+      <point x="-23.75" y="14.5" />
+    </edge>
+    <edge source="webobjects.MainApplication.MainMenu.IdentityAndAccess.Users" target="webobjects.MainApplication.MainMenuPage">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="webobjects.MainApplication.TrialHasEndedPage" target="webobjects.MainApplicationPage">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="webobjects.SignIn.VerifyIdentityPage" target="webobjects.SignInPage">
+      <point x="0.0" y="-14.5" />
+      <point x="434.99999999999994" y="138.0" />
+      <point x="360.49999999999994" y="138.0" />
+      <point x="14.5" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="510.0" y="133.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

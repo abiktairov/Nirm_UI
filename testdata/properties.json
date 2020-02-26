@@ -1,0 +1,16 @@
+{
+  "App_URL": "https://nirmata.io/",
+  "SignIn_URI": "security/login.html",
+  "SignUp_URI": "security/signup.html",
+  "Logout_URI": "webclient/#logout",
+  "ChromeDriver": {
+    "Windows": "driver/chromedriver.exe",
+    "MacOS": "driver/chromedriver",
+    "Linux": "driver/chromedriver-ubuntu"
+  },
+  "FirefoxDriver": {
+    "Windows": "driver/geckodriver.exe",
+    "MacOS": "driver/geckodriver",
+    "Linux": "driver/geckodriver-arm"
+  }
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SignIn"  >
+	<parameter name="browser" value="Chrome" />
+	<parameter name="headless" value="false" />
+<!--	<parameter name="window_position" value="-1200,-1200" />-->
+	<parameter name="window_position" value="1800,0" />
+	<parameter name="window_size" value="1200,800" />
+	<parameter name="start_maximized" value="false" />
+
+	<test thread-count="1" name="SignIn">
+		<parameter name="login_email" value="alexander@nirmata.com" />
+<!--		<parameter name="login_email" value="nirmatatest01@gmail.com" />-->
+		<parameter name="login_account" value="Nirmata" />
+		<parameter name="adduser_email" value="nirmatatest01@gmail.com" />
+
+		<classes>
+			<class name="tests.SignInTest" />
+		</classes>
+	</test>
+
+
+
+</suite>
