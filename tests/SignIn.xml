@@ -3,8 +3,8 @@
 <suite name="SignIn"  >
 	<parameter name="browser" value="Chrome" />
 	<parameter name="headless" value="false" />
-<!--	<parameter name="window_position" value="-1200,-1200" />-->
-	<parameter name="window_position" value="1800,0" />
+	<parameter name="window_position" value="-1200,-1200" />
+<!--	<parameter name="window_position" value="1800,0" />-->
 	<parameter name="window_size" value="1200,800" />
 	<parameter name="start_maximized" value="false" />
 

@@ -4,6 +4,7 @@ import framework.TestData;
 import framework.WebPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import webobjects.SignIn.EnterPasswordPage;
 import webobjects.SignIn.SelectAccountPage;
 import webobjects.SignIn.VerifyIdentityPage;
@@ -17,10 +18,11 @@ public class SignInPage extends WebPage {
 
     public SignInPage(WebDriver webDriver) {
         super(webDriver);
+        Assert.assertTrue(waitAppear(by_login_title), "Timeout of pageObject " + this.getClass().getName() + " loading.");
     }
 
     public WebPage dispatchClass() {
-        String login_title_text = waitAppear(By.xpath(by_login_title)).getText();
+        String login_title_text = getElement(by_login_title).getText();
         if (login_title_text.contains(text_verifyIdentity)) return new VerifyIdentityPage(webDriver);
         if (login_title_text.contains(text_selectAccount)) return new SelectAccountPage(webDriver);
         if (login_title_text.contains(text_enterPassword)) return new EnterPasswordPage(webDriver);

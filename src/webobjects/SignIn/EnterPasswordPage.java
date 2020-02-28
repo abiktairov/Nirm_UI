@@ -3,28 +3,28 @@ package webobjects.SignIn;
 import framework.WebPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import webobjects.MainApplicationPage;
 import webobjects.SignInPage;
 
 public class EnterPasswordPage extends SignInPage {
-    private By by_password = By.xpath("//input[@id='password']");
-    private By by_loginBtn = By.xpath("//button[@id='btnLogin']");
+    private String by_password = "//input[@id='password']";
+    private String by_loginBtn = "//button[@id='btnLogin']";
 
     public EnterPasswordPage(WebDriver webDriver) {
         super(webDriver);
-        waitAppear(By.xpath(by_login_title), text_enterPassword);
+        Assert.assertTrue(waitAppear(by_login_title, text_enterPassword), "Timeout of pageObject " + this.getClass().getName() + " loading.");
     }
 
     public EnterPasswordPage enterPassword(String password) {
-        webDriver.findElement(by_password).sendKeys(password);
+        getElement(by_password).sendKeys(password);
         return this;
     }
 
     public WebPage clickSignInBtn() {
-        webDriver.findElement(by_loginBtn).click();
-        waitDisappear(By.xpath(by_login_title), text_enterPassword);
-        return new MainApplicationPage(webDriver).dispatchClass();
-//        return new MainApplicationPage(webDriver).getWebPageClass();       // think about it!!!!!!!!!!!!!!
+        getElement(by_loginBtn).click();
+        if (waitDisappear(by_login_title, text_enterPassword)) return new MainApplicationPage(webDriver).dispatchClass();
+        return this;
     }
 
 }

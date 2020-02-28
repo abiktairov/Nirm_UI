@@ -3,6 +3,7 @@ package webobjects.SignIn;
 import framework.WebPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import webobjects.SignInPage;
 
 public class SelectAccountPage extends SignInPage {
@@ -10,14 +11,13 @@ public class SelectAccountPage extends SignInPage {
 
     public SelectAccountPage(WebDriver webDriver) {
         super(webDriver);
-        waitAppear(By.xpath(by_login_title), text_selectAccount);
+        Assert.assertTrue(waitAppear(by_login_title, text_selectAccount), "Timeout of pageObject " + this.getClass().getName() + " loading.");
     }
 
     public WebPage selectAccount(String login_account) {
-
-        webDriver.findElement(By.xpath(by_selectAccount.replaceAll("__param__", login_account))).click();
-        waitDisappear(By.xpath(by_login_title), text_selectAccount);
-        return dispatchClass();
+       getElement(by_selectAccount.replaceAll("__param__", login_account)).click();
+        if (waitDisappear(by_login_title, text_selectAccount)) return dispatchClass();
+        return this;
     }
 
 }

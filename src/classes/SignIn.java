@@ -3,6 +3,7 @@ package classes;
 import framework.JavaMailer;
 import framework.WebPage;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import webobjects.SignIn.EnterPasswordPage;
 import webobjects.SignIn.EnterEmailPage;
 import framework.TestData;
@@ -18,6 +19,7 @@ public class SignIn {
 
     public SignIn(WebDriver webDriver, String applicationURL) {
         loginStartTime = new Date();
+        webDriver.get(applicationURL);
         nextPage = new EnterEmailPage(webDriver,applicationURL + TestData.getProperty("SignIn_URI"));
     }
 
@@ -39,9 +41,20 @@ public class SignIn {
 
     public WebPage loginNirmataAccount(String login_email, String login_account) {
         nextPage = enterEmail(login_email);
-        nextPage = nextPage instanceof VerifyIdentityPage ? verifyIdentity(extractCodeFromEmail(login_email)) : nextPage;
-        nextPage = nextPage instanceof SelectAccountPage ? selectAccount(login_account) : nextPage;
-        return nextPage instanceof EnterPasswordPage ? enterPassword(TestData.getUser("user_password", login_email)) : nextPage;
+        Assert.assertFalse(nextPage instanceof EnterEmailPage, "Email has not been accepted.");
+        if (nextPage instanceof VerifyIdentityPage) {
+            nextPage = verifyIdentity(extractCodeFromEmail(login_email));
+            Assert.assertFalse(nextPage instanceof VerifyIdentityPage, "Access code has not been accepted.");
+        }
+        if (nextPage instanceof SelectAccountPage) {
+            nextPage = selectAccount(login_account);
+            Assert.assertFalse(nextPage instanceof SelectAccountPage, "Account selection was failed.");
+        }
+        if (nextPage instanceof EnterPasswordPage) {
+            nextPage = enterPassword(TestData.getUser("user_password", login_email));
+            Assert.assertFalse(nextPage instanceof EnterPasswordPage, "Password has not been accepted.");
+        }
+        return nextPage;
     }
 
     private String extractCodeFromEmail(String login_email) {

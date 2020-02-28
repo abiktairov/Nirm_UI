@@ -6,8 +6,10 @@ import org.openqa.selenium.WebDriver;
 import webobjects.MainApplication.MainMenu.IdentityAndAccess.Users;
 import webobjects.MainApplicationPage;
 
+import org.testng.Assert;
+
 public class MainMenuPage extends MainApplicationPage {
-    private By by_navbar_with_username = By.xpath("//div[contains(@class,'navbar')]//span[contains(@class,'username')]");
+    String by_navbar_with_username = "//div[contains(@class,'navbar')]//span[contains(@class,'username')]";
 //    String by_menu_item = "//div[contains(@class,'main-navigation')]//span[contains(text(),'__param__')]";
 //String by_menu_item = "//li[@id='__param__']";
     String by_menu_item = "//span[contains(@class,'title') and contains(text(),'__param__')]/ancestor::a[*]";
@@ -15,13 +17,13 @@ public class MainMenuPage extends MainApplicationPage {
 
     public MainMenuPage(WebDriver webDriver) {
         super(webDriver);
-        waitAppear(by_navbar_with_username);
+        Assert.assertTrue(waitAppear(by_navbar_with_username), "Timeout of pageObject " + this.getClass().getName() + " loading.");
     }
 
     public WebPage selectMenuItem(String s) {
-        By by = By.xpath(by_menu_item.replaceAll("__param__", s));
+        String by_navbar_with_username = this.by_menu_item.replaceAll("__param__", s);
 
-         waitAppear(by).click();
+        if (waitAppear(by_navbar_with_username)) getElement(by_navbar_with_username).click();
 
         switch (s) {
             case "iam_menu": ;
@@ -29,4 +31,5 @@ public class MainMenuPage extends MainApplicationPage {
         }
         return null;
     }
+
 }

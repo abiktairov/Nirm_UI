@@ -5,6 +5,8 @@ import webobjects.MainApplicationPage;
 
 public class TrialHasEndedPage extends MainApplicationPage {
 
-    public TrialHasEndedPage(WebDriver webDriver) {super(webDriver);}
+    public TrialHasEndedPage(WebDriver webDriver) {
+        super(webDriver);
+    }
 
 }

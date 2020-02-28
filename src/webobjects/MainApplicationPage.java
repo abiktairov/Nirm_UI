@@ -3,6 +3,7 @@ package webobjects;
 import framework.WebPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import webobjects.MainApplication.GetStartedPage;
 import webobjects.MainApplication.MainMenuPage;
 import webobjects.MainApplication.TrialHasEndedPage;
@@ -13,12 +14,18 @@ public class MainApplicationPage extends WebPage {
     private String by_skip_setup = "//a[@id='skipSetup']";
     private String by_convert_to_tire = "//a[@id='convertToTire']";
 
-    public MainApplicationPage(WebDriver webDriver) {super(webDriver);}
+    public MainApplicationPage(WebDriver webDriver) {
+        super(webDriver);
+        Assert.assertTrue(waitAppear(by_navbar_header), "Timeout of pageObject " + this.getClass().getName() + " loading.");
+    }
 
     public WebPage dispatchClass() {
-        waitAppear(By.xpath(by_navbar_header));
-        return elementIsVisible(By.xpath(by_navbar_with_username)) ? new MainMenuPage(webDriver) :
-                elementIsVisible(By.xpath(by_skip_setup)) ? new GetStartedPage(webDriver) :
-                        elementIsVisible(By.xpath(by_convert_to_tire)) ? new TrialHasEndedPage(webDriver) : null;
+        if (elementIsVisible(by_navbar_with_username))
+            return new MainMenuPage(webDriver);
+        else if (elementIsVisible(by_skip_setup))
+            return new GetStartedPage(webDriver);
+        else if (elementIsVisible(by_convert_to_tire))
+            return new TrialHasEndedPage(webDriver);
+        return null;
     }
 }
