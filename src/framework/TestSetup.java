@@ -1,32 +1,55 @@
 package framework;
 
+import com.aventstack.extentreports.AnalysisStrategy;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 import webobjects.SignIn.EnterEmailPage;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class TestSetup {
-    protected static WebDriver webDriver;
+    protected static EventFiringWebDriver webDriver;
+    protected static Date testStartTime = new Date();
     protected String applicationURL = TestData.getProperty("App_URL");
     private static boolean _headless, _start_maximized;;
     private static String _browser, _window_position, _window_size, _os;
+    private static String reportDir = TestData.getProperty("Report_Directory");
     protected SoftAssert softAssert = new SoftAssert();
 
-    @BeforeClass
+    public static ExtentHtmlReporter htmlReporter;
+    public static ExtentReports reports;
+    public static ExtentTest suiteInfo;
+    public static ExtentTest methodInfo;
+    public static ExtentTest testInfo;
+    public static String testName;
+
+
+
+
+    @BeforeSuite
     @Parameters ({"browser", "headless", "window_position", "window_size", "start_maximized"})
     public static void setUp (@Optional String browser, @Optional String headless, @Optional String window_position, @Optional String window_size, @Optional String start_maximized) {
 
-        // initialize optional veriables
+        // initialize optional variables
         _headless = (headless != null) && headless.equalsIgnoreCase("true");
         _browser = (browser != null) ? browser : "Chrome";
         _window_position = window_position;
@@ -34,20 +57,99 @@ public class TestSetup {
         _start_maximized = (start_maximized != null) && start_maximized.equalsIgnoreCase("true");
         _os = System.getProperty("os.name").toLowerCase();
 
+        // initialize report system
+
+        String reportName = reportDir + "//" + new SimpleDateFormat("yyyyMMddhhmmss").format(testStartTime) + ".html";
+        htmlReporter = new ExtentHtmlReporter(reportName);
+        htmlReporter.config().setDocumentTitle("Automation Report");
+        htmlReporter.config().setReportName("Functional Report");
+        htmlReporter.config().setTheme(Theme.STANDARD);
+        reports = new ExtentReports();
+        reports.setAnalysisStrategy(AnalysisStrategy.TEST);
+        reports.attachReporter(htmlReporter);
+        reports.setSystemInfo("Environment", "QA");
+        reports.setSystemInfo("Hostname", System.getProperty("user.name"));
+        reports.setSystemInfo("OS Version", _os);
+        reports.setSystemInfo("OS Architecture", System.getProperty("os.arch"));
+        reports.setSystemInfo("Java Version", System.getProperty("java.runtime.version"));
+        reports.setSystemInfo("Browser", _browser);
+        reports.setSystemInfo("Tester Name", "Automation Tester");
+
         switch (_browser) {
-            case "Chrome": StartChrome(); break;
-            case "Firefox": StartFireFox(); break;
+            case "Chrome": webDriver = new EventFiringWebDriver(StartChrome()); break;
+            case "Firefox": webDriver = new EventFiringWebDriver(StartFireFox()); break;
             default: break;
         }
+        webDriver.register(new EventReporter());
         webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-    @AfterClass
+//    @BeforeSuite
+//    public void setupReport(ITestContext ctx) {
+//        String reportDirectory = "report";
+//        htmlReporter = new ExtentHtmlReporter(reportDirectory);
+//        htmlReporter.config().setDocumentTitle("Automation Report");
+//        htmlReporter.config().setReportName("Functional Report");
+//        htmlReporter.config().setTheme(Theme.STANDARD);
+//
+//        try {
+//            FileWriter fileWriterTest = new FileWriter(reportDirectory + "/failedMethods.txt", false);
+//
+//            fileWriterTest.close();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        try {
+//            FileWriter fileWriterSubject = new FileWriter(reportDirectory + "resources/report/failedSubject.txt", false);
+//
+//            fileWriterSubject.close();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//
+//        }
+//
+//        reports = new ExtentReports();
+//        reports.setAnalysisStrategy(AnalysisStrategy.TEST);
+//        reports.attachReporter(htmlReporter);
+//        reports.setSystemInfo("Environment", "QA");
+//        reports.setSystemInfo("Hostname", System.getProperty("user.name"));
+//        reports.setSystemInfo("OS Version", _os);
+//        reports.setSystemInfo("OS Architecture", System.getProperty("os.arch"));
+//        reports.setSystemInfo("Java Version", System.getProperty("java.runtime.version"));
+//        reports.setSystemInfo("Browser", _browser);
+//        reports.setSystemInfo("Tester Name", "Automation Tester");
+//
+//
+//    }
+
+
+    @AfterSuite
     public static void tearDown() {
+        reports.flush();
         webDriver.close();
     }
 
-    private static void StartFireFox() {
+    @AfterMethod
+    public void tearDown(ITestResult result) throws IOException {
+        if (result.getStatus()==ITestResult.FAILURE) {
+            testInfo.log(Status.FAIL,"TEST CASE FAILED: "+result.getName());
+            testInfo.log(Status.FAIL,"TEST CASE FAILED: "+result.getThrowable());
+
+            String screenshotPath= getScreenshot(webDriver, result.getName());
+
+            testInfo.addScreenCaptureFromPath(screenshotPath);
+
+        }else if (result.getStatus()== ITestResult.SKIP){
+            testInfo.log(Status.SKIP,"Test case SKIPPED: "+result.getName());
+        }else if(result.getStatus()==ITestResult.SUCCESS){
+            testInfo.log(Status.PASS,"Test Case PASSED: "+result.getName());
+
+        }
+    }
+
+    private static WebDriver StartFireFox() {
+        WebDriver webDriver;
         String _driverPath;
         FirefoxOptions firefoxOptions = new FirefoxOptions();
         // replace for simething to get maximized if defined
@@ -56,9 +158,11 @@ public class TestSetup {
         else { _driverPath = TestData.getProperty("FiefoxDriver.Linux"); _headless = true; }
         if (_headless) firefoxOptions.addArguments("-headless");
         webDriver = new FirefoxDriver(firefoxOptions);
+        return webDriver;
     }
 
-    private static void StartChrome() {
+    private static WebDriver StartChrome() {
+        WebDriver webDriver;
         String _driverPath;
         if (_os.contains("win")) _driverPath = TestData.getProperty("ChromeDriver.Windows");
         else if (_os.contains("mac")) _driverPath = TestData.getProperty("ChromeDriver.MacOS");
@@ -77,6 +181,22 @@ public class TestSetup {
         System.setProperty("webdriver.chrome.driver", _driverPath);
         webDriver = new ChromeDriver(chromeOptions);
         if (_start_maximized) webDriver.manage().window().maximize();
+        return webDriver;
+    }
+
+    public static String getScreenshot(WebDriver webDriver, String screenshotName)throws IOException {
+        String scDirName = reportDir + "//screenshots//" + new SimpleDateFormat("yyyyMMddhhmmss").format(testStartTime);
+        String scName = scDirName + "//" + screenshotName + ".png";
+//        String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+        TakesScreenshot ts = (TakesScreenshot)webDriver;
+        File sc = ts.getScreenshotAs(OutputType.FILE);
+//        String scName = reportDirectory + "//screenshots//" + screenshotName + "_" + dateName + ".png";
+
+        File scDir = new File(scDirName);
+        if (!scDir.exists()) scDir.mkdir();
+
+        sc.renameTo(new File(scName));
+        return scName;
     }
 
     public void justWait(int timeSeconds) {
@@ -99,16 +219,6 @@ public class TestSetup {
 
     public void deleteAllCookies() {
         webDriver.manage().deleteAllCookies();
-    }
-
-    public String extractCodeFromEmail(String login_email, Date checkAfter) {
-        NirmataMailer nirmataMailer = new NirmataMailer(TestData.getUser("email_host", login_email),
-                TestData.getUser("email_protocol", login_email),
-                TestData.getUser("email_folder", login_email),
-                TestData.getUser("email", login_email),
-                TestData.getUser("email_password", login_email));
-
-        return nirmataMailer.getAccessCode(checkAfter, 60, 5);
     }
 
 }

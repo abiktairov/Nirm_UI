@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="SignIn" parallel="methods" >
+<suite name="Test cases related to Sign In" parallel="methods" >
+
+	<listeners>
+		<listener class-name="framework.TestListener"></listener>
+	</listeners>
+
 	<parameter name="browser" value="Chrome" />
 	<parameter name="headless" value="false" />
 <!--	<parameter name="window_position" value="-1200,-1200" />-->
@@ -29,7 +34,7 @@
 			</class>
 			<class name="tests.ResetPasswordTest">
 				<methods>
-					<!--					<include name="test2.*" />-->
+					<include name="test1.*" />
 					<!--					<include name="test3.*" />-->
 
 				</methods>

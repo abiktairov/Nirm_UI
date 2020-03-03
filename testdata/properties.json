@@ -12,5 +12,6 @@
     "Windows": "driver/geckodriver.exe",
     "MacOS": "driver/geckodriver",
     "Linux": "driver/geckodriver-arm"
-  }
+  },
+  "Report_Directory": "reports"
 }

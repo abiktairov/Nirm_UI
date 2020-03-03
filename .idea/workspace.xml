@@ -2,35 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d592c2b-3bee-431a-b5ff-a721e764b5c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/ResetPasswordTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/SignInTestAll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webobjects/SignIn/ResetPasswordPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webobjects/SignIn/SelectAccountResetPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webobjects/SignIn/SetPasswordPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webobjects/SignIn/SignUpPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aventstack_extentreports_4_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_bson_3_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_3_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_3_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/TestReport.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reportsTestReport.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/framework/EventReporter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/framework/TestListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/SignIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/SignIn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/framework/JavaMailer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/NirmataMailer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nirm_UI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Nirm_UI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/framework/TestSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/TestSetup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/framework/WebPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/WebPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/SignInTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/SignInTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/EnterEmailPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/EnterEmailPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/EnterPasswordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/EnterPasswordPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/SelectAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/SelectAccountPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/VerifyIdentityPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/VerifyIdentityPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webobjects/SignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignInPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/classes/SignIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/classes/SignIn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/framework/JavaMailer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/ResetPasswordTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/ResetPasswordTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/framework/NirmataMailer$ShortMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/framework/NirmataMailer$ShortMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/framework/NirmataMailer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/framework/NirmataMailer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/framework/TestSetup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/framework/TestSetup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/framework/WebPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/framework/WebPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tests/ResetPasswordTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/ResetPasswordTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/tests/SignInTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/SignInTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/EnterEmailPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/EnterEmailPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/EnterPasswordPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/EnterPasswordPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/SelectAccountPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/SelectAccountPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/VerifyIdentityPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/VerifyIdentityPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignInPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignInPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testdata/properties.json" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/properties.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SignIn.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SignIn.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,6 +55,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -153,12 +151,15 @@
       <workItem from="1582311100963" duration="26895000" />
       <workItem from="1582658209290" duration="24365000" />
       <workItem from="1582751814245" duration="109345000" />
-      <workItem from="1583197023474" duration="3303000" />
+      <workItem from="1583197023474" duration="18026000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="181" key="#Project_Structure" timestamp="1582153795141">
@@ -178,6 +179,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583134989017" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1583201423730">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583201423730" />
     <state x="592" y="212" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1582079245794">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -196,11 +201,15 @@
     </state>
     <state x="655" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583084510668" />
     <state x="655" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582747103104" />
-    <state x="1082" y="403" width="754" height="601" key="#xdebugger.evaluate" timestamp="1583162410549">
+    <state x="870" y="273" width="471" height="494" key="#xdebugger.XInspectDialog" timestamp="1583265125978">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="870" y="273" width="471" height="494" key="#xdebugger.XInspectDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583265125978" />
+    <state x="525" y="387" width="754" height="601" key="#xdebugger.evaluate" timestamp="1583265962137">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1082" y="403" width="754" height="601" key="#xdebugger.evaluate/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583162410549" />
-    <state x="525" y="387" width="1300" height="582" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582928629482" />
+    <state x="525" y="387" width="1300" height="582" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583265962137" />
     <state x="694" y="285" key="EnvironmentVariablesDialog" timestamp="1582248238307">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -210,58 +219,58 @@
     </state>
     <state x="740" y="252" key="FileChooserDialogImpl/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583028356223" />
     <state x="740" y="252" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582746779461" />
-    <state width="1877" height="208" key="GridCell.Tab.0.bottom" timestamp="1583200037775">
+    <state width="1877" height="182" key="GridCell.Tab.0.bottom" timestamp="1583267979033">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="249" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583172209441" />
-    <state width="1877" height="208" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583200037775" />
+    <state width="1877" height="182" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583225312565" />
+    <state width="1877" height="182" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583267979033" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582441104467" />
-    <state width="1877" height="208" key="GridCell.Tab.0.center" timestamp="1583200037775">
+    <state width="1877" height="182" key="GridCell.Tab.0.center" timestamp="1583267979033">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="249" key="GridCell.Tab.0.center/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583172209441" />
-    <state width="1877" height="208" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583200037775" />
+    <state width="1877" height="182" key="GridCell.Tab.0.center/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583225312564" />
+    <state width="1877" height="182" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583267979033" />
     <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582441104467" />
-    <state width="1877" height="208" key="GridCell.Tab.0.left" timestamp="1583200037775">
+    <state width="1877" height="182" key="GridCell.Tab.0.left" timestamp="1583267979033">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="249" key="GridCell.Tab.0.left/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583172209441" />
-    <state width="1877" height="208" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583200037775" />
+    <state width="1877" height="182" key="GridCell.Tab.0.left/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583225312564" />
+    <state width="1877" height="182" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583267979033" />
     <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582441104467" />
-    <state width="1877" height="208" key="GridCell.Tab.0.right" timestamp="1583200037775">
+    <state width="1877" height="182" key="GridCell.Tab.0.right" timestamp="1583267979033">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="249" key="GridCell.Tab.0.right/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583172209441" />
-    <state width="1877" height="208" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583200037775" />
+    <state width="1877" height="182" key="GridCell.Tab.0.right/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583225312564" />
+    <state width="1877" height="182" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583267979033" />
     <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582441104467" />
-    <state width="1877" height="208" key="GridCell.Tab.1.bottom" timestamp="1583200037775">
+    <state width="1877" height="342" key="GridCell.Tab.1.bottom" timestamp="1583266593746">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="209" key="GridCell.Tab.1.bottom/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583172134786" />
-    <state width="1877" height="208" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583200037775" />
+    <state width="1877" height="342" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583266593746" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582441104467" />
-    <state width="1877" height="208" key="GridCell.Tab.1.center" timestamp="1583200037775">
+    <state width="1877" height="342" key="GridCell.Tab.1.center" timestamp="1583266593746">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="209" key="GridCell.Tab.1.center/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583172134786" />
-    <state width="1877" height="208" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583200037775" />
+    <state width="1877" height="342" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583266593746" />
     <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582441104467" />
-    <state width="1877" height="208" key="GridCell.Tab.1.left" timestamp="1583200037775">
+    <state width="1877" height="342" key="GridCell.Tab.1.left" timestamp="1583266593746">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="209" key="GridCell.Tab.1.left/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583172134786" />
-    <state width="1877" height="208" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583200037775" />
+    <state width="1877" height="342" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583266593746" />
     <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582441104467" />
-    <state width="1877" height="208" key="GridCell.Tab.1.right" timestamp="1583200037775">
+    <state width="1877" height="342" key="GridCell.Tab.1.right" timestamp="1583266593746">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="209" key="GridCell.Tab.1.right/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583172134786" />
-    <state width="1877" height="208" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583200037775" />
+    <state width="1877" height="342" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583266593746" />
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582441104467" />
-    <state x="490" y="178" key="Maven.ArtifactSearchDialog" timestamp="1582144961717">
+    <state x="490" y="178" key="Maven.ArtifactSearchDialog" timestamp="1583261270922">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="490" y="178" key="Maven.ArtifactSearchDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582144961717" />
+    <state x="490" y="178" key="Maven.ArtifactSearchDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583261270922" />
     <state x="440" y="97" key="SettingsEditor" timestamp="1582158877345">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

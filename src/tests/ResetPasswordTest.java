@@ -85,7 +85,8 @@ public class ResetPasswordTest extends TestSetup {
 
     @Test (dependsOnMethods = {"test103"}, testName = "Verify ...   any other combinations of passwords ...")
     @Parameters({"multiple_accounts_user"})
-    public void test203(String multiple_accounts_user) {
+    public void test203() {
+
         // place for additional password validations
     }
 
@@ -130,12 +131,13 @@ public class ResetPasswordTest extends TestSetup {
         String newValidPassword = TestData.getUser("user_password", multiple_accounts_user);
         nextPage = ((SetPasswordPage) nextPage).enterPassword(newValidPassword).enterPasswordConfirmation(newValidPassword).clicResetPasswordBtn();
         Assert.assertTrue(((SetPasswordPage) nextPage).isSetPasswordConfirmationAppeared(), "Valid password / confirmation combination has not been accepted!");
-        nextPage = ((SetPasswordPage) nextPage).clicSignInBtn();
-        Assert.assertTrue(isEnterEmailPage(),"'Sign in to Nirmata' button doesn't lead to login page!");
 
-        nextPage = isEnterEmailPage() ? nextPage : runApplication();
-        nextPage = new SignIn(webDriver, applicationURL).loginNirmataAccount(multiple_accounts_user, user_account);
-        Assert.assertTrue(isMainApplicationPage(),"Sign in with restored password has been failed!");
+//        nextPage = ((SetPasswordPage) nextPage).clicSignInBtn();
+//        Assert.assertTrue(isEnterEmailPage(),"'Sign in to Nirmata' button doesn't lead to login page!");
+//
+//        nextPage = isEnterEmailPage() ? nextPage : runApplication();
+//        nextPage = new SignIn(webDriver, applicationURL).loginNirmataAccount(multiple_accounts_user, user_account);
+//        Assert.assertTrue(isMainApplicationPage(),"Sign in with restored password has been failed!");
     }
 
 
@@ -155,9 +157,7 @@ public class ResetPasswordTest extends TestSetup {
         return (nextPage instanceof ResetPasswordPage);
     }
 
-    private boolean isSelectAccountResetPage() {
-        return (nextPage instanceof SelectAccountResetPage);
-    }
+    private boolean isSelectAccountResetPage() { return (nextPage instanceof SelectAccountResetPage); }
 
     private boolean isSetPasswordPage() {
         return (nextPage instanceof SetPasswordPage);
