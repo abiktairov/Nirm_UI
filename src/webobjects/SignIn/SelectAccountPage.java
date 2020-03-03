@@ -8,6 +8,8 @@ import webobjects.SignInPage;
 
 public class SelectAccountPage extends SignInPage {
     private String by_selectAccount = "//*[contains(@class,'text-primary')]//*[.='__param__']";     // parametrized locator
+    private String by_another_email_link = "//a[@id='showEmailForm']";
+
 
     public SelectAccountPage(WebDriver webDriver) {
         super(webDriver);
@@ -15,9 +17,15 @@ public class SelectAccountPage extends SignInPage {
     }
 
     public WebPage selectAccount(String login_account) {
-       getElement(by_selectAccount.replaceAll("__param__", login_account)).click();
+        clickElement(by_selectAccount.replaceAll("__param__", login_account));
         if (waitDisappear(by_login_title, text_selectAccount)) return dispatchClass();
         return this;
+    }
+
+    public WebPage clickUseDifferentEmailLink() {
+        clickElement(by_another_email_link);
+        if (waitDisappear(by_login_title, text_selectAccount)) return dispatchClass();
+        else return this;
     }
 
 }

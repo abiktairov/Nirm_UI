@@ -1,21 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="SignIn"  >
+<suite name="SignIn" parallel="methods" >
 	<parameter name="browser" value="Chrome" />
 	<parameter name="headless" value="false" />
-	<parameter name="window_position" value="-1200,-1200" />
-<!--	<parameter name="window_position" value="1800,0" />-->
+<!--	<parameter name="window_position" value="-1200,-1200" />-->
+	<parameter name="window_position" value="1800,0" />
 	<parameter name="window_size" value="1200,800" />
 	<parameter name="start_maximized" value="false" />
 
 	<test thread-count="1" name="SignIn">
-		<parameter name="login_email" value="alexander@nirmata.com" />
-<!--		<parameter name="login_email" value="nirmatatest01@gmail.com" />-->
-		<parameter name="login_account" value="Nirmata" />
-		<parameter name="adduser_email" value="nirmatatest01@gmail.com" />
+		<parameter name="multiple_accounts_user" value="alexander@nirmata.com" />
+		<parameter name="single_account_user" value="nirmatatest01@gmail.com" />
+		<parameter name="not_registered_user" value="sfsdfsdfsdf@sdff.ddd" />
+		<parameter name="wrong_format_email" value="asdasd$aaas" />
+		<parameter name="fake_verification_code" value="asfss" />
+		<parameter name="wrong_password" value="sfhwkfsjkafhsj" />
+		<parameter name="user_account" value="Nirmata" />
+		<parameter name="adduser_email" value="nirmautomated101@gmail.com" />
 
 		<classes>
-			<class name="tests.SignInTest" />
+			<class name="tests.SignInTestAll">
+				<methods>
+<!--					<include name="test2.*" />-->
+<!--					<include name="test3.*" />-->
+					<exclude name=".*" />
+
+				</methods>
+			</class>
+			<class name="tests.ResetPasswordTest">
+				<methods>
+					<!--					<include name="test2.*" />-->
+					<!--					<include name="test3.*" />-->
+
+				</methods>
+			</class>
 		</classes>
 	</test>
 

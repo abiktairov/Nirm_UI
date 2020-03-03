@@ -2,20 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d592c2b-3bee-431a-b5ff-a721e764b5c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/ResetPasswordTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/SignInTestAll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/webobjects/SignIn/ResetPasswordPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/webobjects/SignIn/SelectAccountResetPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/webobjects/SignIn/SetPasswordPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/webobjects/SignIn/SignUpPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/SignIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/SignIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/framework/JavaMailer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/NirmataMailer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/framework/TestSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/TestSetup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/framework/WebPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/WebPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests/SignInTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/SignInTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webobjects/MainApplication/GetStartedPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/MainApplication/GetStartedPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webobjects/MainApplication/MainMenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/MainApplication/MainMenuPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webobjects/MainApplication/TrialHasEndedPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/MainApplication/TrialHasEndedPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webobjects/MainApplicationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/MainApplicationPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/EnterEmailPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/EnterEmailPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/EnterPasswordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/EnterPasswordPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/SelectAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/SelectAccountPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/VerifyIdentityPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/VerifyIdentityPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/webobjects/SignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignInPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/classes/SignIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/classes/SignIn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/framework/JavaMailer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/framework/TestSetup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/framework/TestSetup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/framework/WebPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/framework/WebPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tests/SignInTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/SignInTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/EnterEmailPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/EnterEmailPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/EnterPasswordPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/EnterPasswordPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/SelectAccountPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/SelectAccountPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/VerifyIdentityPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/VerifyIdentityPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignInPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignInPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SignIn.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SignIn.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +49,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Y0UhmFhTeK1m1hA1p6oDV5ahnM" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -50,47 +68,27 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="webobjects.App" />
-      <recent name="webobjects.SignIn" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\NIRMATA\GitHub\Nirm_UI\src\webobjects" />
+      <recent name="D:\NIRMATA\GitHub\Nirm_UI\src" />
+      <recent name="D:\NIRMATA\GitHub\Nirm_UI" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\NIRMATA\GitHub\Nirm_UI\tests" />
       <recent name="D:\NIRMATA\GitHub\Nirm_UI" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tests" />
       <recent name="webobjects.SignIn" />
       <recent name="framework" />
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\NIRMATA\GitHub\Nirm_UI\src\webobjects" />
-      <recent name="D:\NIRMATA\GitHub\Nirm_UI\src" />
-      <recent name="D:\NIRMATA\GitHub\Nirm_UI" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="webobjects.SignIn" />
+      <recent name="webobjects.App" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.D:/NIRMATA/GitHub/Nirm_UI/tests/SignInTest.xml">
-    <configuration name="D:/NIRMATA/GitHub/Nirm_UI/tests/SignInTest.xml" type="TestNG">
-      <module name="Nirm_UI" />
-      <useClassPathOnly />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/tests/SignIn.xml" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="PROPERTIES_FILE" value="" />
-      <envs>
-        <env name="PASS" value="Kubernete$" />
-      </envs>
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.D:/NIRMATA/GitHub/Nirm_UI/tests/SignIn.xml">
     <configuration name="D:/NIRMATA/GitHub/Nirm_UI/tests/SignIn.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Nirm_UI" />
       <useClassPathOnly />
@@ -112,17 +110,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SignIn" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SignInTestAll.test101" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Nirm_UI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="classes.*" />
+          <option name="PATTERN" value="tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="classes" />
-      <option name="MAIN_CLASS_NAME" value="classes.SignIn" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.SignInTestAll" />
+      <option name="METHOD_NAME" value="test101" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -130,14 +129,13 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.D:/NIRMATA/GitHub/Nirm_UI/tests/SignInTest.xml" />
-      <item itemvalue="TestNG.SignIn" />
       <item itemvalue="TestNG.D:/NIRMATA/GitHub/Nirm_UI/tests/SignIn.xml" />
+      <item itemvalue="TestNG.SignInTestAll.test101" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.D:/NIRMATA/GitHub/Nirm_UI/tests/SignIn.xml" />
-        <item itemvalue="TestNG.SignIn" />
+        <item itemvalue="TestNG.SignInTestAll.test101" />
       </list>
     </recent_temporary>
   </component>
@@ -154,7 +152,8 @@
       <workItem from="1582079129968" duration="45669000" />
       <workItem from="1582311100963" duration="26895000" />
       <workItem from="1582658209290" duration="24365000" />
-      <workItem from="1582751814245" duration="14665000" />
+      <workItem from="1582751814245" duration="109345000" />
+      <workItem from="1583197023474" duration="3303000" />
     </task>
     <servers />
   </component>
@@ -170,83 +169,94 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="278" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582851556314" />
-    <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582743916950">
+    <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583028513446">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1582248240645" />
+    <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583028513446" />
     <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582743916950" />
+    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1583134989017">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583134989017" />
     <state x="592" y="212" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1582079245794">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="592" y="212" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582079245794" />
-    <state x="761" y="389" width="398" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1582156552635">
+    <state x="640" y="251" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1583196983014">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="640" y="251" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583196983014" />
+    <state x="761" y="389" width="398" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1583021598192">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="761" y="389" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583021598192" />
     <state x="761" y="389" width="398" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582156552635" />
-    <state x="655" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1582747103104">
+    <state x="655" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583084510668">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="655" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583084510668" />
     <state x="655" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582747103104" />
-    <state x="525" y="387" width="1300" height="582" key="#xdebugger.evaluate" timestamp="1582746467388">
+    <state x="1082" y="403" width="754" height="601" key="#xdebugger.evaluate" timestamp="1583162410549">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1288" y="363" key="#xdebugger.evaluate/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1582248990282" />
-    <state x="525" y="387" width="1300" height="582" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582746467388" />
+    <state x="1082" y="403" width="754" height="601" key="#xdebugger.evaluate/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583162410549" />
+    <state x="525" y="387" width="1300" height="582" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582928629482" />
     <state x="694" y="285" key="EnvironmentVariablesDialog" timestamp="1582248238307">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="694" y="285" key="EnvironmentVariablesDialog/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1582248238307" />
-    <state x="740" y="252" key="FileChooserDialogImpl" timestamp="1582746779461">
+    <state x="740" y="252" key="FileChooserDialogImpl" timestamp="1583028356223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="740" y="252" key="FileChooserDialogImpl/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583028356223" />
     <state x="740" y="252" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582746779461" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1582872509221">
+    <state width="1877" height="208" key="GridCell.Tab.0.bottom" timestamp="1583200037775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1582872509221" />
-    <state width="1877" height="333" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582754334109" />
+    <state width="1877" height="249" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583172209441" />
+    <state width="1877" height="208" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583200037775" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582441104467" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1582872509221">
+    <state width="1877" height="208" key="GridCell.Tab.0.center" timestamp="1583200037775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1582872509221" />
-    <state width="1877" height="333" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582754334108" />
+    <state width="1877" height="249" key="GridCell.Tab.0.center/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583172209441" />
+    <state width="1877" height="208" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583200037775" />
     <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582441104467" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1582872509221">
+    <state width="1877" height="208" key="GridCell.Tab.0.left" timestamp="1583200037775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1582872509221" />
-    <state width="1877" height="333" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582754334108" />
+    <state width="1877" height="249" key="GridCell.Tab.0.left/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583172209441" />
+    <state width="1877" height="208" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583200037775" />
     <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582441104467" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1582872509221">
+    <state width="1877" height="208" key="GridCell.Tab.0.right" timestamp="1583200037775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1582872509221" />
-    <state width="1877" height="333" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582754334109" />
+    <state width="1877" height="249" key="GridCell.Tab.0.right/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583172209441" />
+    <state width="1877" height="208" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583200037775" />
     <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582441104467" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1582872509222">
+    <state width="1877" height="208" key="GridCell.Tab.1.bottom" timestamp="1583200037775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1582872509222" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582750105374" />
+    <state width="1877" height="209" key="GridCell.Tab.1.bottom/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583172134786" />
+    <state width="1877" height="208" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583200037775" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582441104467" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1582872509222">
+    <state width="1877" height="208" key="GridCell.Tab.1.center" timestamp="1583200037775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1582872509222" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582750105374" />
+    <state width="1877" height="209" key="GridCell.Tab.1.center/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583172134786" />
+    <state width="1877" height="208" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583200037775" />
     <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582441104467" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1582872509221">
+    <state width="1877" height="208" key="GridCell.Tab.1.left" timestamp="1583200037775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1582872509221" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582750105374" />
+    <state width="1877" height="209" key="GridCell.Tab.1.left/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583172134786" />
+    <state width="1877" height="208" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583200037775" />
     <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582441104467" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1582872509222">
+    <state width="1877" height="208" key="GridCell.Tab.1.right" timestamp="1583200037775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1582872509222" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582750105374" />
+    <state width="1877" height="209" key="GridCell.Tab.1.right/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583172134786" />
+    <state width="1877" height="208" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583200037775" />
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582441104467" />
     <state x="490" y="178" key="Maven.ArtifactSearchDialog" timestamp="1582144961717">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -260,21 +270,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="776" y="301" key="chooseDestDirectoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582153542232" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/classes/SignIn.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tests/SignInTest.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="616" y="240" key="run.anything.popup" timestamp="1583009515591">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583009515591" />
+    <state x="616" y="173" width="670" height="676" key="search.everywhere.popup" timestamp="1583168875063">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="173" width="670" height="676" key="search.everywhere.popup/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583168875063" />
   </component>
 </project>

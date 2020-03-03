@@ -4,30 +4,41 @@ import classes.SignIn;
 import framework.TestSetup;
 import framework.WebPage;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import webobjects.MainApplicationPage;
 import webobjects.SignIn.EnterEmailPage;
+import webobjects.SignIn.SelectAccountPage;
+import webobjects.SignIn.SignUpPage;
+import webobjects.SignIn.VerifyIdentityPage;
+
+import java.util.Date;
 
 public class SignInTest extends TestSetup {
     private WebPage nextPage;
+    private SignIn signIn;
+    private Date testStartTime;
 
-    @Test (testName = "Happy path using test data")
-    @Parameters({"login_email", "login_account"})
-    public void TestSignIn01(String login_email, String login_account) {
-        SignIn signIn = new SignIn(webDriver, applicationURL);
-        nextPage = signIn.loginNirmataAccount(login_email,login_account);
+    @BeforeMethod
+    public void StartSignIn() {
+        signIn = new SignIn(webDriver, applicationURL);
+        nextPage = signIn.getNextPage();
+        testStartTime = new Date();
+    }
+
+    @Test (testName = "Happy path using test data, user with multiple accounts")
+    @Parameters({"multiple_accounts_user", "user_account"})
+    public void TestSignIn001(String multiple_accounts_user, String user_account) {
+        nextPage = signIn.loginNirmataAccount(multiple_accounts_user,user_account);
         Assert.assertTrue(nextPage instanceof MainApplicationPage,"SignIn failed");
-//        nextPage.forceLogout(applicationURL);
     }
 
-    @Test (testName = "Verify if user cannot login with empty email")
-    public void TestSignIn02() {
-        nextPage = new SignIn(webDriver, applicationURL).enterEmail("");
-        Assert.assertTrue(nextPage instanceof EnterEmailPage,"Empty email has been accepted!");
+    @Test (testName = "Happy path using test data, user with single account")
+    @Parameters({"single_account_user"})
+    public void TestSignIn002(String single_account_user) {
+        nextPage = signIn.loginNirmataAccount(single_account_user,"");
+        Assert.assertTrue(nextPage instanceof MainApplicationPage,"SignIn failed");
     }
+
 //
 //    @Test (dependsOnMethods = {"AccessAppMainPage"})
 //    @Parameters({"adduser_email"})
@@ -38,7 +49,7 @@ public class SignInTest extends TestSetup {
 
     @AfterMethod
     public void ApplicationLogout() {
-        nextPage.forceLogout(applicationURL);
+        forceLogout();
     }
 
 

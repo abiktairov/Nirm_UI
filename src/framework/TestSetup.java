@@ -1,6 +1,5 @@
 package framework;
 
-import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -10,7 +9,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+import org.testng.asserts.SoftAssert;
+import webobjects.SignIn.EnterEmailPage;
 
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class TestSetup {
@@ -18,6 +20,7 @@ public class TestSetup {
     protected String applicationURL = TestData.getProperty("App_URL");
     private static boolean _headless, _start_maximized;;
     private static String _browser, _window_position, _window_size, _os;
+    protected SoftAssert softAssert = new SoftAssert();
 
     @BeforeClass
     @Parameters ({"browser", "headless", "window_position", "window_size", "start_maximized"})
@@ -74,6 +77,38 @@ public class TestSetup {
         System.setProperty("webdriver.chrome.driver", _driverPath);
         webDriver = new ChromeDriver(chromeOptions);
         if (_start_maximized) webDriver.manage().window().maximize();
+    }
+
+    public void justWait(int timeSeconds) {
+        try {
+            Thread.sleep(timeSeconds * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public WebPage runApplication() {
+        webDriver.get(applicationURL);
+        return new EnterEmailPage(webDriver);
+    }
+
+    public WebPage forceLogout() {
+        webDriver.get(applicationURL + TestData.getProperty("Logout_URI"));
+        return new EnterEmailPage(webDriver);
+    }
+
+    public void deleteAllCookies() {
+        webDriver.manage().deleteAllCookies();
+    }
+
+    public String extractCodeFromEmail(String login_email, Date checkAfter) {
+        NirmataMailer nirmataMailer = new NirmataMailer(TestData.getUser("email_host", login_email),
+                TestData.getUser("email_protocol", login_email),
+                TestData.getUser("email_folder", login_email),
+                TestData.getUser("email", login_email),
+                TestData.getUser("email_password", login_email));
+
+        return nirmataMailer.getAccessCode(checkAfter, 60, 5);
     }
 
 }

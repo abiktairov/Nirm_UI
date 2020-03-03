@@ -9,6 +9,9 @@ import webobjects.SignInPage;
 public class VerifyIdentityPage extends SignInPage {
     private String by_verificationCode = "//input[@id='password']";
     private String by_loginBtn = "//button[@id='btnLogin']";
+    private String by_resend_code_link = "//a[@id='resendInitialIdentityCode']";
+    private String by_alert_code_sent = "//div[@id='alertblock']";
+    private String text_alert_code_sent = "Successfully sent verification code";
 
     public VerifyIdentityPage(WebDriver webDriver) {
         super(webDriver);
@@ -16,14 +19,18 @@ public class VerifyIdentityPage extends SignInPage {
     }
 
     public VerifyIdentityPage enterVerificationCode(String veridicationCode) {
-        webDriver.findElement(By.xpath(by_verificationCode)).sendKeys(veridicationCode);
+        updateElement(by_verificationCode, veridicationCode);
         return this;
     }
 
     public WebPage clickSignInBtn() {
-        getElement(by_loginBtn).click();
+        clickElement(by_loginBtn);
         if (waitDisappear(by_login_title, text_verifyIdentity)) return dispatchClass();
         else return this;
     }
 
+    public boolean clickResendCodeLink() {
+        clickElement(by_resend_code_link);
+        return waitAppear(by_alert_code_sent, text_alert_code_sent);
+    }
 }

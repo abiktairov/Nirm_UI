@@ -9,15 +9,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 public class WebPage {
-    private static final int TIMEOUT = 30;
+    private static final int LONG_TIMEOUT = 30;     // using for expected appearing (may take longer time)
+    private static final int SHORT_TIMEOUT = 5;     // using for expected disappearing (usually shorter)
     private static final int POLLING = 1000;
     protected WebDriver webDriver;
-    private WebDriverWait wait;
+    private WebDriverWait longWait, shortWait;
     protected Exception exception;
 
     public WebPage(WebDriver webDriver) {
         this.webDriver = webDriver;
-        wait = new WebDriverWait(webDriver, TIMEOUT, POLLING);
+        longWait = new WebDriverWait(webDriver, LONG_TIMEOUT, POLLING);
+        shortWait = new WebDriverWait(webDriver, SHORT_TIMEOUT, POLLING);
     }
 
     protected boolean elementIsVisible(String xpath) {
@@ -32,14 +34,14 @@ public class WebPage {
 
     // checking just by a visibility of the element with the locator
     protected boolean waitAppear(String xpath) {
-        try { wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath))); }
+        try { longWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath))); }
         catch (Exception e) { exception=e; return false; }
         return true;
     }
 
     // checking by text presenting ('contains') in the element with the locator
     protected boolean waitAppear(String xpath, String text) {
-        try { wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath(xpath), text)); }
+        try { longWait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath(xpath), text)); }
         catch (Exception e) { exception = e; return false; }
         return true;
     }
@@ -52,7 +54,7 @@ public class WebPage {
 //    }
 
     protected boolean waitDisappear(String xpath) {
-        try { wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(xpath))); }
+        try { shortWait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(xpath))); }
         catch (Exception e) { exception = e; return false; }
         return true;
     }
@@ -60,7 +62,7 @@ public class WebPage {
     protected boolean waitDisappear(String xpath, String text) {
         // try to check invisibility of element or (if it visible) check text inside the element
         try {
-            wait.until(ExpectedConditions.or(
+            shortWait.until(ExpectedConditions.or(
                     ExpectedConditions.invisibilityOfElementLocated(By.xpath(xpath)),
                     ExpectedConditions.not(ExpectedConditions.textToBePresentInElementLocated(By.xpath(xpath), text))
             ));
@@ -69,11 +71,11 @@ public class WebPage {
     }
 
     protected void waitDisappear(String xpath, String text, boolean strict) {
-        if (strict) wait.until(ExpectedConditions.or(
+        if (strict) shortWait.until(ExpectedConditions.or(
                 ExpectedConditions.invisibilityOfElementLocated(By.xpath(xpath)),
                 ExpectedConditions.not(ExpectedConditions.textToBe(By.xpath(xpath), text))
         ));
-        else wait.until(ExpectedConditions.or(
+        else shortWait.until(ExpectedConditions.or(
                 ExpectedConditions.invisibilityOfElementLocated(By.xpath(xpath)),
                 ExpectedConditions.not(ExpectedConditions.textToBePresentInElementLocated(By.xpath(xpath), text))
         ));
@@ -82,12 +84,26 @@ public class WebPage {
     public WebElement getElement(String xpath) {
         return webDriver.findElement(By.xpath(xpath));
     }
+
+    public WebElement updateElement(String xpath, String value) {
+        WebElement webElement = getElement(xpath);
+        webElement.clear();
+        webElement.sendKeys(value);
+        return webElement;
+    }
+
+    public WebElement clickElement(String xpath) {
+        WebElement webElement = getElement(xpath);
+        webElement.click();
+        return webElement;
+    }
+
     protected WebPage dispatchClass() {
         return this;
     }
 
-    public void forceLogout(String applicationURL) {
-        webDriver.get(applicationURL + TestData.getProperty("Logout_URI"));
-    }
+//    public void forceLogout(String applicationURL) {
+//        webDriver.get(applicationURL + TestData.getProperty("Logout_URI"));
+//    }
 
 }

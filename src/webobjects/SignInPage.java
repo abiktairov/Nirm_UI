@@ -5,9 +5,7 @@ import framework.WebPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import webobjects.SignIn.EnterPasswordPage;
-import webobjects.SignIn.SelectAccountPage;
-import webobjects.SignIn.VerifyIdentityPage;
+import webobjects.SignIn.*;
 
 public class SignInPage extends WebPage {
     protected String by_login_title = "//div[@class='login-title']";
@@ -15,6 +13,14 @@ public class SignInPage extends WebPage {
     protected String text_verifyIdentity = "Verify Identity";
     protected String text_selectAccount = "Select an Account";
     protected String text_enterPassword = "Hello, ";
+    protected String text_signUp = "Sign up for a Free Trial";
+    protected String text_resetPassword = "Reset your password";
+    protected String text_selectAccountReset = "Select Account for Reset";
+    protected String text_setPasswordPage = "Set your password";
+
+//    protected String by_EnterEmailPage = "//div[@class='login-title' and contains(text(), 'Sign in to Nirmata')]";
+//    protected String by_ResetPasswordPage = "//div[@class='login-block' and contains(., 'Reset your password') and contains(., 'Your request has been submitted')]";
+//    protected String by_ResetPasswordConfirmationPage = "//div[@class='login-block' and contains(., 'Reset your password') and contains(., 'Your request has been submitted')]";
 
     public SignInPage(WebDriver webDriver) {
         super(webDriver);
@@ -23,9 +29,14 @@ public class SignInPage extends WebPage {
 
     public WebPage dispatchClass() {
         String login_title_text = getElement(by_login_title).getText();
+        if (login_title_text.contains(text_login)) return new EnterEmailPage(webDriver);
         if (login_title_text.contains(text_verifyIdentity)) return new VerifyIdentityPage(webDriver);
         if (login_title_text.contains(text_selectAccount)) return new SelectAccountPage(webDriver);
         if (login_title_text.contains(text_enterPassword)) return new EnterPasswordPage(webDriver);
+        if (login_title_text.contains(text_signUp)) return new SignUpPage(webDriver);
+        if (login_title_text.contains(text_resetPassword)) return new ResetPasswordPage(webDriver);
+        if (login_title_text.contains(text_selectAccountReset)) return new SelectAccountResetPage(webDriver);
+        if (login_title_text.contains(text_setPasswordPage)) return new SetPasswordPage(webDriver);
         return null;
     }
 
