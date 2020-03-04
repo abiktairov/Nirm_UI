@@ -3,7 +3,6 @@ package framework;
 import com.aventstack.extentreports.AnalysisStrategy;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.openqa.selenium.OutputType;
@@ -14,7 +13,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
-import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
@@ -28,7 +26,8 @@ import java.util.concurrent.TimeUnit;
 
 public class TestSetup {
     protected static EventFiringWebDriver webDriver;
-    protected static Date testStartTime = new Date();
+    public static Date testStartTime = new Date();
+    public static Exception lastException;
     protected String applicationURL = TestData.getProperty("App_URL");
     private static boolean _headless, _start_maximized;;
     private static String _browser, _window_position, _window_size, _os;
@@ -41,9 +40,6 @@ public class TestSetup {
     public static ExtentTest methodInfo;
     public static ExtentTest testInfo;
     public static String testName;
-
-
-
 
     @BeforeSuite
     @Parameters ({"browser", "headless", "window_position", "window_size", "start_maximized"})
@@ -84,46 +80,6 @@ public class TestSetup {
         webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-//    @BeforeSuite
-//    public void setupReport(ITestContext ctx) {
-//        String reportDirectory = "report";
-//        htmlReporter = new ExtentHtmlReporter(reportDirectory);
-//        htmlReporter.config().setDocumentTitle("Automation Report");
-//        htmlReporter.config().setReportName("Functional Report");
-//        htmlReporter.config().setTheme(Theme.STANDARD);
-//
-//        try {
-//            FileWriter fileWriterTest = new FileWriter(reportDirectory + "/failedMethods.txt", false);
-//
-//            fileWriterTest.close();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//
-//        try {
-//            FileWriter fileWriterSubject = new FileWriter(reportDirectory + "resources/report/failedSubject.txt", false);
-//
-//            fileWriterSubject.close();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//
-//        }
-//
-//        reports = new ExtentReports();
-//        reports.setAnalysisStrategy(AnalysisStrategy.TEST);
-//        reports.attachReporter(htmlReporter);
-//        reports.setSystemInfo("Environment", "QA");
-//        reports.setSystemInfo("Hostname", System.getProperty("user.name"));
-//        reports.setSystemInfo("OS Version", _os);
-//        reports.setSystemInfo("OS Architecture", System.getProperty("os.arch"));
-//        reports.setSystemInfo("Java Version", System.getProperty("java.runtime.version"));
-//        reports.setSystemInfo("Browser", _browser);
-//        reports.setSystemInfo("Tester Name", "Automation Tester");
-//
-//
-//    }
-
-
     @AfterSuite
     public static void tearDown() {
         reports.flush();
@@ -131,21 +87,7 @@ public class TestSetup {
     }
 
     @AfterMethod
-    public void tearDown(ITestResult result) throws IOException {
-        if (result.getStatus()==ITestResult.FAILURE) {
-            testInfo.log(Status.FAIL,"TEST CASE FAILED: "+result.getName());
-            testInfo.log(Status.FAIL,"TEST CASE FAILED: "+result.getThrowable());
-
-            String screenshotPath= getScreenshot(webDriver, result.getName());
-
-            testInfo.addScreenCaptureFromPath(screenshotPath);
-
-        }else if (result.getStatus()== ITestResult.SKIP){
-            testInfo.log(Status.SKIP,"Test case SKIPPED: "+result.getName());
-        }else if(result.getStatus()==ITestResult.SUCCESS){
-            testInfo.log(Status.PASS,"Test Case PASSED: "+result.getName());
-
-        }
+    public void tearDown(ITestResult result) {
     }
 
     private static WebDriver StartFireFox() {
@@ -184,19 +126,16 @@ public class TestSetup {
         return webDriver;
     }
 
-    public static String getScreenshot(WebDriver webDriver, String screenshotName)throws IOException {
-        String scDirName = reportDir + "//screenshots//" + new SimpleDateFormat("yyyyMMddhhmmss").format(testStartTime);
-        String scName = scDirName + "//" + screenshotName + ".png";
-//        String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+    public static String getScreenshot(WebDriver webDriver, String screenshotName) {
+        String scDirName = reportDir + "/" + "screenshots/" + new SimpleDateFormat("yyyyMMddhhmmss").format(testStartTime);
+        String scName = scDirName + "/" + screenshotName + ".png";
         TakesScreenshot ts = (TakesScreenshot)webDriver;
         File sc = ts.getScreenshotAs(OutputType.FILE);
-//        String scName = reportDirectory + "//screenshots//" + screenshotName + "_" + dateName + ".png";
-
         File scDir = new File(scDirName);
-        if (!scDir.exists()) scDir.mkdir();
-
-        sc.renameTo(new File(scName));
-        return scName;
+        if (!scDir.exists()) scDir.mkdirs();
+        File newName = new File(scName);
+        sc.renameTo(newName);
+        return newName.getAbsolutePath();
     }
 
     public void justWait(int timeSeconds) {

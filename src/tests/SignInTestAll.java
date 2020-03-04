@@ -30,7 +30,7 @@ public class SignInTestAll extends TestSetup {
     }
 
 
-    @Test (alwaysRun = true, testName = "Verify if user cannot login with empty, unregistered or wrong-format email and error message appears")
+    @Test (alwaysRun = true, description = "Verify if user cannot login with empty, unregistered or wrong-format email and error message appears")
     @Parameters({"not_registered_user", "wrong_format_email"})
     public void test101(String not_registered_user, String wrong_format_email) {
         nextPage = ((EnterEmailPage) nextPage).enterEmail("").clickSignInBtn();
@@ -49,7 +49,7 @@ public class SignInTestAll extends TestSetup {
         Assert.assertTrue(((EnterEmailPage) nextPage).getErrorMessage().contains("Invalid email address"),"Error message text is not correct!");
 }
 
-    @Test (alwaysRun = true, testName = "Verify if 'Remember me' checkbox is worked")
+    @Test (alwaysRun = true, description = "Verify if 'Remember me' checkbox is worked")
     @Parameters({"single_account_user"})
     public void test102(String single_account_user) {
         nextPage = ((EnterEmailPage) nextPage).enterEmail(single_account_user).clickRememberMe().clickSignInBtn();
@@ -58,14 +58,14 @@ public class SignInTestAll extends TestSetup {
         Assert.assertEquals(single_account_user, ((EnterEmailPage) nextPage).getEmail(), "Email has not been remembered.");
     }
 
-    @Test (alwaysRun = true, testName = "Verify if user can use 'Sign Up for Nirmata account' link")
+    @Test (alwaysRun = true, description = "Verify if user can use 'Sign Up for Nirmata account' link")
     public void test103() {
         nextPage = ((EnterEmailPage) nextPage).clickSignUpLink();
         Assert.assertFalse(nextPage instanceof EnterEmailPage, "'Sign up for Nirmata account' link does not work!");
         Assert.assertTrue(nextPage instanceof SignUpPage, "'Sign up for Nirmata account' link does not lead to Sign Up web page!");
     }
 
-    @Test (alwaysRun = true, testName = "Verify if user cannot login with invalid verification code")
+    @Test (alwaysRun = true, description = "Verify if user cannot login with invalid verification code")
     @Parameters({"multiple_accounts_user", "fake_verification_code"})
     public void test201(String multiple_accounts_user, String fake_verification_code) {
         nextPage = ((EnterEmailPage) nextPage).enterEmail(multiple_accounts_user).clickSignInBtn();
@@ -73,7 +73,7 @@ public class SignInTestAll extends TestSetup {
         Assert.assertTrue(nextPage instanceof VerifyIdentityPage,"Fake verification code has been accepted!");
     }
 
-    @Test (alwaysRun = true, testName = "Verify if user can resend verification code after first attempt failed")
+    @Test (alwaysRun = true, description = "Verify if user can resend verification code after first attempt failed")
     @Parameters({"multiple_accounts_user", "fake_verification_code"})
     public void test202(String multiple_accounts_user, String fake_verification_code) {
         nextPage = ((EnterEmailPage) nextPage).enterEmail(multiple_accounts_user).clickSignInBtn();
@@ -86,7 +86,7 @@ public class SignInTestAll extends TestSetup {
         Assert.assertFalse(nextPage instanceof VerifyIdentityPage,"Resent code has not been accepted!");
     }
 
-    @Test (alwaysRun = true, testName = "Verify if user can start with a different email address from 'Select an Account' page")
+    @Test (alwaysRun = true, description = "Verify if user can start with a different email address from 'Select an Account' page")
     @Parameters({"multiple_accounts_user"})
     public void test301(String multiple_accounts_user) {
         nextPage = assertEmail(multiple_accounts_user);
@@ -98,7 +98,7 @@ public class SignInTestAll extends TestSetup {
         Assert.assertTrue(isEnterEmailPage(),"'Use a different email address' does not lead to 'Sign In to Nirmata' web page!");
     }
 
-    @Test (alwaysRun = true, testName = "Verify if user cannot login with empty or invalid password and error message appears")
+    @Test (alwaysRun = true, description = "Verify if user cannot login with empty or invalid password and error message appears")
     @Parameters({"single_account_user", "wrong_password"})
     public void test401(String single_account_user, String wrong_password) {
         nextPage = assertEmail(single_account_user);
@@ -114,7 +114,7 @@ public class SignInTestAll extends TestSetup {
         Assert.assertTrue(((EnterPasswordPage) nextPage).getErrorMessage().contains("Invalid password. Please try again."), "Error message text is not correct!");
     }
 
-    @Test (alwaysRun = true, testName = "Verify if user can run password recovering")
+    @Test (alwaysRun = true, description = "Verify if user can run password recovering")
     @Parameters({"single_account_user"})
     public void test402(String single_account_user) {
         nextPage = assertEmail(single_account_user);
@@ -124,7 +124,7 @@ public class SignInTestAll extends TestSetup {
         Assert.assertTrue(isResetPasswordPage(),"'Forgot your password' does not lead to 'Reset your password' web page!");
     }
 
-    @Test (alwaysRun = true, testName = "Verify if user can recover his password")
+    @Test (alwaysRun = true, description = "Verify if user can recover his password")
     @Parameters({"single_account_user"})
     public void test501(String single_account_user) {
         nextPage = assertEmail(single_account_user);

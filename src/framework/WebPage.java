@@ -14,7 +14,6 @@ public class WebPage {
     private static final int POLLING = 1000;
     protected WebDriver webDriver;
     private WebDriverWait longWait, shortWait;
-    protected Exception exception;
 
     public WebPage(WebDriver webDriver) {
         this.webDriver = webDriver;
@@ -35,14 +34,14 @@ public class WebPage {
     // checking just by a visibility of the element with the locator
     protected boolean waitAppear(String xpath) {
         try { longWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath))); }
-        catch (Exception e) { exception=e; return false; }
+        catch (Exception e) { TestSetup.lastException = e; return false; }
         return true;
     }
 
     // checking by text presenting ('contains') in the element with the locator
     protected boolean waitAppear(String xpath, String text) {
         try { longWait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath(xpath), text)); }
-        catch (Exception e) { exception = e; return false; }
+        catch (Exception e) { TestSetup.lastException = e; return false; }
         return true;
     }
 
@@ -55,7 +54,7 @@ public class WebPage {
 
     protected boolean waitDisappear(String xpath) {
         try { shortWait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(xpath))); }
-        catch (Exception e) { exception = e; return false; }
+        catch (Exception e) { TestSetup.lastException = e; return false; }
         return true;
     }
 
@@ -66,7 +65,7 @@ public class WebPage {
                     ExpectedConditions.invisibilityOfElementLocated(By.xpath(xpath)),
                     ExpectedConditions.not(ExpectedConditions.textToBePresentInElementLocated(By.xpath(xpath), text))
             ));
-        } catch (Exception e) { exception = e; return false; }
+        } catch (Exception e) { TestSetup.lastException = e; return false; }
         return true;
     }
 

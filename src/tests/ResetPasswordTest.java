@@ -24,16 +24,13 @@ public class ResetPasswordTest extends TestSetup {
     @BeforeMethod
     public void beforeMethod() {
         timeStamp = new Date();
-//        nextPage = runApplication();
     }
 
     @AfterMethod
     public void aftereMethod() {
-//        nextPage = forceLogout();
-//        deleteAllCookies();
     }
 
-    @Test (alwaysRun = true, testName = "Verify if 'Reset your password' page' is accessible")
+    @Test (alwaysRun = true, description = "Verify if 'Reset your password' page' is accessible")
     @Parameters({"single_account_user"})
     public void test101(String single_account_user) {
         nextPage = runApplication();
@@ -43,7 +40,7 @@ public class ResetPasswordTest extends TestSetup {
         Assert.assertTrue(isResetPasswordPage(),"'Reset your password' page has not been loaded', test is stopped.");
     }
 
-    @Test (dependsOnMethods = {"test101"}, testName = "Verify if link to reset password can be obtained")
+    @Test (dependsOnMethods = {"test101"}, description = "Verify if link to reset password can be obtained")
     @Parameters({"multiple_accounts_user"})
     public void test102(String multiple_accounts_user) {
         nextPage = ((ResetPasswordPage) nextPage).enterEmail(multiple_accounts_user).clickResetPasswordBtn();
@@ -52,7 +49,7 @@ public class ResetPasswordTest extends TestSetup {
         Assert.assertFalse(passwordResetLink.isEmpty(), "Password reset link is invalid!");
     }
 
-    @Test (dependsOnMethods = {"test102"}, testName = "Verify if user can select account to reset password")
+    @Test (dependsOnMethods = {"test102"}, description = "Verify if user can select account to reset password")
     @Parameters({"multiple_accounts_user", "user_account"})
     public void test103(String multiple_accounts_user, String user_account) {
         webDriver.get(passwordResetLink);
@@ -62,7 +59,7 @@ public class ResetPasswordTest extends TestSetup {
         Assert.assertTrue(isSetPasswordPage(),"'Set new password' page has not been loaded for multi-account user!");
     }
 
-    @Test (dependsOnMethods = {"test103"}, testName = "Verify if user cannot set empty password")
+    @Test (dependsOnMethods = {"test103"}, description = "Verify if user cannot set empty password")
     public void test201() {
         nextPage = ((SetPasswordPage) nextPage).enterPassword("").enterPasswordConfirmation("").clicResetPasswordBtn();
         Assert.assertFalse(((SetPasswordPage) nextPage).isSetPasswordConfirmationAppeared(), "Empty password has been accepted!");
@@ -72,7 +69,7 @@ public class ResetPasswordTest extends TestSetup {
         Assert.assertTrue(((SetPasswordPage) nextPage).getConfirmationErrorMessage().contains("Please enter a value for this field"), "Error message text is not correct!");
     }
 
-    @Test (dependsOnMethods = {"test103"}, testName = "Verify if user cannot set valid password with invalid confirmation")
+    @Test (dependsOnMethods = {"test103"}, description = "Verify if user cannot set valid password with invalid confirmation")
     @Parameters({"multiple_accounts_user"})
     public void test202(String multiple_accounts_user) {
         String newValidPassword = TestData.getUser("user_password", multiple_accounts_user) + "qqq";
@@ -83,14 +80,14 @@ public class ResetPasswordTest extends TestSetup {
         Assert.assertTrue(((SetPasswordPage) nextPage).getConfirmationErrorMessage().contains("The passwords do not match"), "Error message text is not correct!");
     }
 
-    @Test (dependsOnMethods = {"test103"}, testName = "Verify ...   any other combinations of passwords ...")
+    @Test (dependsOnMethods = {"test103"}, description = "Verify ...   any other combinations of passwords ...")
     @Parameters({"multiple_accounts_user"})
     public void test203() {
 
         // place for additional password validations
     }
 
-    @Test (dependsOnMethods = {"test103"}, testName = "Verify if user can reset password with valid password / confirmation combination")
+    @Test (dependsOnMethods = {"test103"}, description = "Verify if user can reset password with valid password / confirmation combination")
     @Parameters({"multiple_accounts_user"})
     public void test301(String multiple_accounts_user) {
         String newValidPassword = TestData.getUser("user_password", multiple_accounts_user) + "qqq";
@@ -100,7 +97,7 @@ public class ResetPasswordTest extends TestSetup {
         Assert.assertTrue(isEnterEmailPage(),"'Sign in to Nirmata' button doesn't lead to login page!");
     }
 
-    @Test (dependsOnMethods = {"test301"}, testName = "Verify if user can sign in using new password")
+    @Test (dependsOnMethods = {"test301"}, description = "Verify if user can sign in using new password")
     @Parameters({"multiple_accounts_user", "user_account"})
     public void test302(String multiple_accounts_user, String user_account) {
         String newValidPassword = TestData.getUser("user_password", multiple_accounts_user) + "qqq";
@@ -109,7 +106,7 @@ public class ResetPasswordTest extends TestSetup {
         Assert.assertTrue(isMainApplicationPage(),"Sign in with new password has been failed!");
     }
 
-    @Test (dependsOnMethods = {"test302"}, testName = "Set password back to default")
+    @Test (dependsOnMethods = {"test302"}, description = "Set password back to default")
     @Parameters({"single_account_user", "multiple_accounts_user", "user_account"})
     public void test303(String single_account_user, String multiple_accounts_user, String user_account) {
         nextPage = forceLogout();

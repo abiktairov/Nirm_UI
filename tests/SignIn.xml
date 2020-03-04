@@ -13,30 +13,33 @@
 	<parameter name="window_size" value="1200,800" />
 	<parameter name="start_maximized" value="false" />
 
-	<test thread-count="1" name="SignIn">
-		<parameter name="multiple_accounts_user" value="alexander@nirmata.com" />
-		<parameter name="single_account_user" value="nirmatatest01@gmail.com" />
-		<parameter name="not_registered_user" value="sfsdfsdfsdf@sdff.ddd" />
-		<parameter name="wrong_format_email" value="asdasd$aaas" />
-		<parameter name="fake_verification_code" value="asfss" />
-		<parameter name="wrong_password" value="sfhwkfsjkafhsj" />
-		<parameter name="user_account" value="Nirmata" />
-		<parameter name="adduser_email" value="nirmautomated101@gmail.com" />
+	<parameter name="multiple_accounts_user" value="alexander@nirmata.com" />
+	<parameter name="single_account_user" value="nirmatatest01@gmail.com" />
+	<parameter name="not_registered_user" value="sfsdfsdfsdf@sdff.ddd" />
+	<parameter name="wrong_format_email" value="asdasd$aaas" />
+	<parameter name="fake_verification_code" value="asfss" />
+	<parameter name="wrong_password" value="sfhwkfsjkafhsj" />
+	<parameter name="user_account" value="Nirmata" />
+	<parameter name="adduser_email" value="nirmautomated101@gmail.com" />
 
+	<test thread-count="1" name="'Sign in' test cases">
 		<classes>
 			<class name="tests.SignInTestAll">
 				<methods>
 <!--					<include name="test2.*" />-->
 <!--					<include name="test3.*" />-->
-					<exclude name=".*" />
-
+<!--					<exclude name=".*" />-->
 				</methods>
 			</class>
+		</classes>
+	</test>
+
+	<test thread-count="1" name="'Reset password' test cases'">
+		<classes>
 			<class name="tests.ResetPasswordTest">
 				<methods>
-					<include name="test1.*" />
-					<!--					<include name="test3.*" />-->
-
+<!--					<include name="test1.*" />-->
+<!--					<include name="test3.*" />-->
 				</methods>
 			</class>
 		</classes>
