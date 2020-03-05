@@ -2,42 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d592c2b-3bee-431a-b5ff-a721e764b5c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nirm_ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nirm_UI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Nirm_UI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/20200304051802.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/20200304052521.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/20200304053439.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/20200304055615.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/20200304060729.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/20200304063700.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/20200304063740.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/20200304064109.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/20200304064513.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/20200304065027.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/20200304065135.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/20200304081222.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/20200304081958.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/20200304082734.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/20200304092701.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/20200304093341.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/screenshots/20200304051802/ifInvalidPassword.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/screenshots/20200304051802/ifResendVerification.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/screenshots/20200304053439/ifUnregisteredEmail.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/screenshots/20200304063700/ifPasswordAccepted.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/screenshots/20200304063740/ifPasswordAccepted.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/screenshots/20200304081222/ifResetPageAccessable.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/screenshots/20200304081222/test101.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/screenshots/20200304081958/ifResetPageAccessable.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/screenshots/20200304082734/ifLinkAvailable.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/screenshots/20200304082734/ifSelectAccount.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/screenshots/20200304082734/ifVerificationAccepted.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/screenshots/20200304082734/test101.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/screenshots/20200304092701/ifLinkAvailable.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/screenshots/20200304092701/ifSelectAccount.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/screenshots/20200304092701/test101.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/screenshots/20200304093341/ifSelectAccount.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +22,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Y0UhmFhTeK1m1hA1p6oDV5ahnM" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -75,14 +42,13 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\NIRMATA\GitHub\Nirm_UI\src\webobjects" />
-      <recent name="D:\NIRMATA\GitHub\Nirm_UI\src" />
-      <recent name="D:\NIRMATA\GitHub\Nirm_UI" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="webobjects.SignIn" />
+      <recent name="webobjects.App" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\NIRMATA\GitHub\Nirm_UI\tests" />
       <recent name="D:\NIRMATA\GitHub\Nirm_UI" />
+      <recent name="D:\NIRMATA\GitHub\Nirm_UI\tests" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="tests" />
@@ -90,9 +56,10 @@
       <recent name="framework" />
       <recent name="" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="webobjects.SignIn" />
-      <recent name="webobjects.App" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\NIRMATA\GitHub\Nirm_UI\src\webobjects" />
+      <recent name="D:\NIRMATA\GitHub\Nirm_UI\src" />
+      <recent name="D:\NIRMATA\GitHub\Nirm_UI" />
     </key>
   </component>
   <component name="RunManager" selected="TestNG.D:/NIRMATA/GitHub/Nirm_UI/tests/SignIn.xml">
@@ -162,7 +129,7 @@
       <workItem from="1582751814245" duration="109345000" />
       <workItem from="1583197023474" duration="66835000" />
       <workItem from="1583368554732" duration="17218000" />
-      <workItem from="1583394911715" duration="3932000" />
+      <workItem from="1583394911715" duration="4582000" />
     </task>
     <servers />
   </component>
