@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import webobjects.SignInPage;
 
-
+// verified for v.2.0
 public class EnterEmailPage extends SignInPage {
     private String by_email = "//input[@id='email']";
     private String by_remember_me = "//input[@id='rememberMe']";
@@ -16,7 +16,7 @@ public class EnterEmailPage extends SignInPage {
 
     public EnterEmailPage(WebDriver webDriver) {
         super(webDriver);
-        Assert.assertTrue(waitAppear(by_login_title, text_login), "Timeout of pageObject " + this.getClass().getName() + " loading.");
+        Assert.assertTrue(waitAppear(by_login_title, text_login), "Timeout of pageObject " + this.getClass().getName() + " appearing.");
     }
 
     public EnterEmailPage enterEmail(String email) {
@@ -35,18 +35,20 @@ public class EnterEmailPage extends SignInPage {
         return this;
     }
 
-    public WebPage clickSignUpLink() {
+    public EnterEmailPage clickSignUpLink() {
         getElement(by_signup_link).click();
-        if (waitDisappear(by_login_title, text_login)) return dispatchClass();
-        else return this;
+        return this;
     }
 
-    public WebPage clickSignInBtn() {
+    public EnterEmailPage clickSignInBtn() {
         getElement(by_loginBtn).click();
-        // if locator deasppeared (email accepted) then return result of dispatching by paranet class
-        if (waitDisappear(by_login_title, text_login)) return dispatchClass();
-        // if locator still appears (email isn't accepted) then return the same class
-        else return this;
+        return this;
+    }
+
+    public WebPage assertThat(boolean expectation, String message) {
+        if (expectation) Assert.assertTrue(waitDisappear(by_login_title, text_login), message);
+        else             Assert.assertFalse(waitDisappear(by_login_title, text_login), message);
+        return dispatchClass();
     }
 
     public String getErrorMessage() {

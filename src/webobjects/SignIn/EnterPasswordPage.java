@@ -1,14 +1,11 @@
 package webobjects.SignIn;
 
 import framework.WebPage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import webobjects.MainApplicationPage;
 import webobjects.SignInPage;
 
-import java.util.Collection;
-
+// verified for v.2.0
 public class EnterPasswordPage extends SignInPage {
     private String by_password = "//input[@id='password']";
     private String by_loginBtn = "//button[@id='btnLogin']";
@@ -27,11 +24,10 @@ public class EnterPasswordPage extends SignInPage {
         return this;
     }
 
-    public WebPage clickSignInBtn() {
+    public EnterPasswordPage clickSignInBtn() {
         clickElement(by_loginBtn);
-//        if (waitDisappear(by_login_title, text_enterPassword)) return dispatchClass();
-        if (waitDisappear(by_login_title, text_enterPassword)) return new MainApplicationPage(webDriver).dispatchClass();
-        else return this;
+        return this;
+
     }
 
     public String getErrorMessage() {
@@ -39,9 +35,15 @@ public class EnterPasswordPage extends SignInPage {
                 elementIsVisible(by_form_error) ? getElement(by_form_error).getText() : "";
     }
 
-    public WebPage clickForgotYourPasswordLink() {
+    public EnterPasswordPage clickForgotYourPasswordLink() {
         clickElement(by_forgot_your_password_link);
-        if (waitDisappear(by_login_title, text_enterPassword)) return dispatchClass();
         return this;
     }
+
+    public WebPage assertThat(boolean expectation, String message) {
+        if (expectation) Assert.assertTrue(waitDisappear(by_login_title, text_enterPassword), message);
+        else             Assert.assertFalse(waitDisappear(by_login_title, text_enterPassword), message);
+        return dispatchClass();
+    }
+
 }

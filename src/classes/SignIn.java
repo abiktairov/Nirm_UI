@@ -37,7 +37,10 @@ public class SignIn {
     }
 
     public WebPage enterEmail(String login_email) {
-        return ((EnterEmailPage) nextPage).enterEmail(login_email).clickSignInBtn();
+        return ((EnterEmailPage) nextPage)
+                .enterEmail(login_email)
+                .clickSignInBtn()
+                .assertThat();
     }
 
     public WebPage verifyIdentity(String verificationCode) {
@@ -49,7 +52,10 @@ public class SignIn {
     }
 
     public WebPage enterPassword(String userPassword) {
-        return ((EnterPasswordPage) nextPage).enterPassword(userPassword).clickSignInBtn();
+        return ((EnterPasswordPage) nextPage)
+                .enterPassword(userPassword)
+                .clickSignInBtn()
+                .assertThat();
     }
 
     public WebPage loginNirmataAccount(String login_email, String login_account) {

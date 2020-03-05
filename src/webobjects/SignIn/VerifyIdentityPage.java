@@ -1,11 +1,11 @@
 package webobjects.SignIn;
 
 import framework.WebPage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import webobjects.SignInPage;
 
+// verified for v.2.0
 public class VerifyIdentityPage extends SignInPage {
     private String by_verificationCode = "//input[@id='password']";
     private String by_loginBtn = "//button[@id='btnLogin']";
@@ -23,14 +23,19 @@ public class VerifyIdentityPage extends SignInPage {
         return this;
     }
 
-    public WebPage clickSignInBtn() {
+    public VerifyIdentityPage clickSignInBtn() {
         clickElement(by_loginBtn);
-        if (waitDisappear(by_login_title, text_verifyIdentity)) return dispatchClass();
-        else return this;
+        return this;
     }
 
     public boolean clickResendCodeLink() {
         clickElement(by_resend_code_link);
         return waitAppear(by_alert_code_sent, text_alert_code_sent);
+    }
+
+    public WebPage assertThat(boolean expectation, String message) {
+        if (expectation) Assert.assertTrue(waitDisappear(by_login_title, text_verifyIdentity), message);
+        else             Assert.assertFalse(waitDisappear(by_login_title, text_verifyIdentity), message);
+        return dispatchClass();
     }
 }

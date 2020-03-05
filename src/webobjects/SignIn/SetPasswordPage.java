@@ -3,9 +3,9 @@ package webobjects.SignIn;
 import framework.WebPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import webobjects.MainApplicationPage;
 import webobjects.SignInPage;
 
+// verified for v.2.0
 public class SetPasswordPage extends SignInPage {
     private String by_password = "//input[@id='password']";
     private String by_confirm_password = "//input[@id='confirmPassword']";
@@ -15,8 +15,6 @@ public class SetPasswordPage extends SignInPage {
     private String by_help_block_password = "//input[@id='password']/../..//p[@class='help-block']";
     private String by_help_block_confirmation = "//input[@id='confirmPassword']/../..//p[@class='help-block']";
     private String by_form_error = "//p[@id='form-errors']";
-
-
 
     public SetPasswordPage(WebDriver webDriver) {
         super(webDriver);
@@ -33,15 +31,26 @@ public class SetPasswordPage extends SignInPage {
         return this;
     }
 
-    public WebPage clicResetPasswordBtn() {
+    public SetPasswordPage clicResetPasswordBtn() {
         clickElement(by_resetBtn);
         return this;
     }
 
-    public WebPage clicSignInBtn() {
+    public SetPasswordPage clicSignInBtn() {
         clickElement(by_signInBtn);
-        if (waitDisappear(by_login_title, text_setPasswordPage)) return dispatchClass();
-        else return this;
+        return this;
+    }
+
+    public SetPasswordPage assertPasswordConfirmation(boolean expectation, String message) {
+        if (expectation) Assert.assertTrue(waitDisappear(by_resetBtn) && waitAppear(by_confirmation_text), message);
+        else             Assert.assertFalse(waitDisappear(by_resetBtn) && waitAppear(by_confirmation_text), message);
+        return this;
+    }
+
+    public WebPage assertThat(boolean expectation, String message) {
+        if (expectation) Assert.assertTrue(waitDisappear(by_login_title, text_setPasswordPage), message);
+        else             Assert.assertFalse(waitDisappear(by_login_title, text_setPasswordPage), message);
+        return dispatchClass();
     }
 
     public boolean isSetPasswordConfirmationAppeared() {

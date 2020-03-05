@@ -28,16 +28,18 @@ public class SignInPage extends WebPage {
     }
 
     public WebPage dispatchClass() {
-        String login_title_text = getElement(by_login_title).getText();
-        if (login_title_text.contains(text_login)) return new EnterEmailPage(webDriver);
-        if (login_title_text.contains(text_verifyIdentity)) return new VerifyIdentityPage(webDriver);
-        if (login_title_text.contains(text_selectAccount)) return new SelectAccountPage(webDriver);
-        if (login_title_text.contains(text_enterPassword)) return new EnterPasswordPage(webDriver);
-        if (login_title_text.contains(text_signUp)) return new SignUpPage(webDriver);
-        if (login_title_text.contains(text_resetPassword)) return new ResetPasswordPage(webDriver);
-        if (login_title_text.contains(text_selectAccountReset)) return new SelectAccountResetPage(webDriver);
-        if (login_title_text.contains(text_setPasswordPage)) return new SetPasswordPage(webDriver);
-        return null;
+        if (elementIsVisible(by_login_title)) {
+            String login_title_text = getElement(by_login_title).getText();
+            if (login_title_text.contains(text_login)) return new EnterEmailPage(webDriver);
+            if (login_title_text.contains(text_verifyIdentity)) return new VerifyIdentityPage(webDriver);
+            if (login_title_text.contains(text_selectAccount)) return new SelectAccountPage(webDriver);
+            if (login_title_text.contains(text_enterPassword)) return new EnterPasswordPage(webDriver);
+            if (login_title_text.contains(text_signUp)) return new SignUpPage(webDriver);
+            if (login_title_text.contains(text_resetPassword)) return new ResetPasswordPage(webDriver);
+            if (login_title_text.contains(text_selectAccountReset)) return new SelectAccountResetPage(webDriver);
+            if (login_title_text.contains(text_setPasswordPage)) return new SetPasswordPage(webDriver);
+        }
+        return new MainApplicationPage(webDriver).dispatchClass();
     }
 
 }

@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import webobjects.SignInPage;
 
+// verified for v.2.0
 public class ResetPasswordPage extends SignInPage {
     private String by_email = "//input[@id='email']";
     private String by_resetBtn = "//button[contains(.,'Reset Password')]";
@@ -17,13 +18,18 @@ public class ResetPasswordPage extends SignInPage {
     }
 
     public ResetPasswordPage enterEmail(String email) {
-        getElement(by_email).clear();
-        getElement(by_email).sendKeys(email);
+        updateElement(by_email, email);
         return this;
     }
 
-    public WebPage clickResetPasswordBtn() {
-        getElement(by_resetBtn).click();
+    public ResetPasswordPage clickResetPasswordBtn() {
+        clickElement(by_resetBtn);
+        return this;
+    }
+
+    public ResetPasswordPage assertThat(boolean expectation, String message) {
+        if (expectation) Assert.assertTrue(waitDisappear(by_resetBtn) && waitAppear(by_confirmation_text), message);
+        else             Assert.assertFalse(waitDisappear(by_resetBtn) && waitAppear(by_confirmation_text), message);
         return this;
     }
 

@@ -3,6 +3,17 @@
   "SignIn_URI": "security/login.html",
   "SignUp_URI": "security/signup.html",
   "Logout_URI": "webclient/#logout",
+  "browser": {
+    "name": "Chrome",
+    "headless": "false",
+    "window_position": "0,0",
+    "window_size": "1200,800",
+    "start_maximized": "false"
+  },
+  "appearing_timeout": {
+    "long": "30",
+    "short": "15"
+  },
   "ChromeDriver": {
     "Windows": "driver/chromedriver.exe",
     "MacOS": "driver/chromedriver",

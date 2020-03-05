@@ -28,7 +28,8 @@ public class TestSetup {
     protected static EventFiringWebDriver webDriver;
     public static Date testStartTime = new Date();
     public static Exception lastException;
-    protected String applicationURL = TestData.getProperty("App_URL");
+    protected static WebPage nextPage;
+    protected static String applicationURL = TestData.getProperty("App_URL");
     private static boolean _headless, _start_maximized;;
     private static String _browser, _window_position, _window_size, _os;
     private static String reportDir = TestData.getProperty("Report_Directory");
@@ -42,16 +43,30 @@ public class TestSetup {
     public static String testName;
 
     @BeforeSuite
-    @Parameters ({"browser", "headless", "window_position", "window_size", "start_maximized"})
-    public static void setUp (@Optional String browser, @Optional String headless, @Optional String window_position, @Optional String window_size, @Optional String start_maximized) {
+    @Parameters ({"App_URL", "browser", "headless", "window_position", "window_size", "start_maximized"})
+    public static void setUp (@Optional String App_URL,
+                              @Optional String browser,
+                              @Optional String headless,
+                              @Optional String window_position,
+                              @Optional String window_size,
+                              @Optional String start_maximized) {
 
         // initialize optional variables
-        _headless = (headless != null) && headless.equalsIgnoreCase("true");
-        _browser = (browser != null) ? browser : "Chrome";
-        _window_position = window_position;
-        _window_size = window_size;
-        _start_maximized = (start_maximized != null) && start_maximized.equalsIgnoreCase("true");
+        applicationURL = TestData.getSuiteProperty("App_URL", App_URL, "https://nirmata.io/");
+        _headless = TestData.getSuiteProperty("browser.headless", headless, "false")
+                .equalsIgnoreCase("true");
+        _browser = TestData.getSuiteProperty("browser.name", browser, "Chrome");
+        _window_position = TestData.getSuiteProperty("browser.window_position", window_position, "0,0");
+        _window_size = TestData.getSuiteProperty("browser.window_size", window_size, "1200,800");
+        _start_maximized = TestData.getSuiteProperty("browser.start_maximized", start_maximized, "true")
+                .equalsIgnoreCase("true");
         _os = System.getProperty("os.name").toLowerCase();
+
+//        _headless = (headless != null) && headless.equalsIgnoreCase("true");
+//        _browser = (browser != null) ? browser : "Chrome";
+//        _window_position = window_position;
+//        _window_size = window_size;
+//        _start_maximized = (start_maximized != null) && start_maximized.equalsIgnoreCase("true");
 
         // initialize report system
 
@@ -147,8 +162,11 @@ public class TestSetup {
     }
 
     public WebPage runApplication() {
-        webDriver.get(applicationURL);
-        return new EnterEmailPage(webDriver);
+        if (!(nextPage instanceof EnterEmailPage)) {
+            webDriver.get(applicationURL);
+            nextPage = new EnterEmailPage(webDriver);
+        }
+        return nextPage;
     }
 
     public WebPage forceLogout() {

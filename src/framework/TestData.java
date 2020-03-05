@@ -84,4 +84,13 @@ public class TestData {
         return result;
     }
 
+    public static String getSuiteProperty(String key, String suiteParameter, String defaultValue) {
+        String result = System.getenv(key);
+        if (result == null || result.isEmpty()) result = suiteParameter;
+        if (result == null || result.isEmpty()) result = TestData.getProperty(key);
+        if (result == null || result.isEmpty()) result = defaultValue;
+        return result;
+    }
+
+
 }
