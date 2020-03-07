@@ -13,10 +13,15 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
+import webobjects.MainApplicationPage;
 import webobjects.SignIn.EnterEmailPage;
+import webobjects.SignIn.EnterPasswordPage;
+import webobjects.SignIn.SelectAccountPage;
+import webobjects.SignIn.VerifyIdentityPage;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,7 +29,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-public class TestSetup {
+public abstract class TestSetup {
     protected static EventFiringWebDriver webDriver;
     public static Date testStartTime = new Date();
     public static Exception lastException;
@@ -70,7 +75,12 @@ public class TestSetup {
 
         // initialize report system
 
-        String reportName = reportDir + "//" + new SimpleDateFormat("yyyyMMddhhmmss").format(testStartTime) + ".html";
+//        String reportName = reportDir + "//" + new SimpleDateFormat("yyyyMMddhhmmss").format(testStartTime) + ".html";
+
+        String reportName = TestData.getSuiteProperty("BUILD_NUMBER", "",new SimpleDateFormat("yyyyMMddhhmmss").format(testStartTime));
+        reportName = reportDir + "/" + reportName + ".html";
+
+
         htmlReporter = new ExtentHtmlReporter(reportName);
         htmlReporter.config().setDocumentTitle("Automation Report");
         htmlReporter.config().setReportName("Functional Report");
@@ -176,6 +186,29 @@ public class TestSetup {
 
     public void deleteAllCookies() {
         webDriver.manage().deleteAllCookies();
+    }
+
+    public WebPage signInNirmata(String login_email, String login_account, String password) {
+        Date timeStamp = new Date();
+        nextPage = runApplication();
+        nextPage = ((EnterEmailPage) nextPage)
+                .enterEmail(login_email)
+                .clickSignInBtn()
+                .assertThat();
+        if (nextPage instanceof VerifyIdentityPage)
+            nextPage = ((VerifyIdentityPage) nextPage)
+                    .enterVerificationCode(new NirmataMailer(login_email).getAccessCode(timeStamp, 60, 10))
+                    .clickSignInBtn()
+                    .assertThat();
+        if (nextPage instanceof SelectAccountPage)
+            nextPage = ((SelectAccountPage) nextPage)
+                .selectAccount(login_account)
+                .assertThat();
+        nextPage = ((EnterPasswordPage) nextPage)
+                .enterPassword(password)
+                .clickSignInBtn()
+                .assertThat();
+        return nextPage;
     }
 
 }

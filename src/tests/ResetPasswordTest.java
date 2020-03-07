@@ -1,6 +1,5 @@
 package tests;
 
-import classes.SignIn;
 import framework.NirmataMailer;
 import framework.TestData;
 import framework.TestSetup;
@@ -49,10 +48,12 @@ public class ResetPasswordTest extends TestSetup {
 
     @Test (dependsOnMethods = {"ifResetPageAccessable"}, description = "Verify if link to reset password can be obtained.")
     public void ifLinkAvailable() {
+        justWait(1);
         nextPage = ((ResetPasswordPage) nextPage)
                 .enterEmail(multiple_accounts_user)
                 .clickResetPasswordBtn()
                 .assertThat();
+
         passwordResetLink = new NirmataMailer(multiple_accounts_user).getPasswordResetLink(timeStamp, 60, 5);
         Assert.assertFalse(passwordResetLink.isEmpty(), "Password reset link is invalid!");
     }
@@ -79,7 +80,7 @@ public class ResetPasswordTest extends TestSetup {
         Assert.assertTrue(((SetPasswordPage) nextPage).getConfirmationErrorMessage().contains("Please enter a value for this field"), "Error message text is not correct!");
     }
 
-    @Test (dependsOnMethods = {"ifSelectAccount"}, description = "Verify if user cannot set valid password with invalid confirmation.")
+    @Test (dependsOnMethods = {"ifSetEmptyPassword"}, description = "Verify if user cannot set valid password with invalid confirmation.")
     public void ifPasswordNotMatch() {
         String newValidPassword = TestData.getUser("user_password", multiple_accounts_user) + "qqq";
         String newInvalidPassword = TestData.getUser("user_password", multiple_accounts_user) + "aaa";
@@ -92,13 +93,13 @@ public class ResetPasswordTest extends TestSetup {
         Assert.assertTrue(((SetPasswordPage) nextPage).getConfirmationErrorMessage().contains("The passwords do not match"), "Error message text is not correct!");
     }
 
-    @Test (dependsOnMethods = {"ifSelectAccount"}, description = "Verify ...   any other combinations of passwords ...")
-    public void ifSomethingElse() {
-        // place for additional password validations
-    }
+//    @Test (dependsOnMethods = {"ifPasswordNotMatch"}, description = "Verify ...   any other combinations of passwords ...")
+//    public void ifSomethingElse() {
+//        // place for additional password validations
+//    }
 
-    @Test (dependsOnMethods = {"ifSelectAccount"}, description = "Verify if user can reset password with valid password / confirmation combination.")
-    public void ifReserSuccess() {
+    @Test (dependsOnMethods = {"ifPasswordNotMatch"}, description = "Verify if user can reset password with valid password / confirmation combination.")
+    public void ifResetSuccess() {
         String newValidPassword = TestData.getUser("user_password", multiple_accounts_user) + "qqq";
         nextPage = ((SetPasswordPage) nextPage)
                 .enterPassword(newValidPassword)
@@ -108,11 +109,12 @@ public class ResetPasswordTest extends TestSetup {
                 .assertThat();
     }
 
-    @Test (dependsOnMethods = {"ifReserSuccess"}, description = "Verify if user can sign in using new password.")
+    @Test (dependsOnMethods = {"ifResetSuccess"}, description = "Verify if user can sign in using new password.")
     public void ifSigninNewPassword() {
         String newValidPassword = TestData.getUser("user_password", multiple_accounts_user) + "qqq";
+        nextPage = signInNirmata(multiple_accounts_user, user_account, newValidPassword);
 //        nextPage = runApplication();
-        nextPage = new SignIn(webDriver, applicationURL).loginNirmataAccount(multiple_accounts_user, user_account, newValidPassword);
+//        nextPage = new SignIn(webDriver, applicationURL).loginNirmataAccount(multiple_accounts_user, user_account, newValidPassword);
 //        Assert.assertTrue(isMainApplicationPage(),"Sign in with new password has been failed!");
     }
 
@@ -120,12 +122,13 @@ public class ResetPasswordTest extends TestSetup {
     public void ifSetPasswordBack() {
         nextPage = forceLogout();
         nextPage = ((EnterEmailPage) nextPage)
-                .enterEmail(multiple_accounts_user)
+                .enterEmail(single_account_user)
                 .clickSignInBtn()
                 .assertThat();
         nextPage = ((EnterPasswordPage) nextPage)
                 .clickForgotYourPasswordLink()
                 .assertThat();
+        justWait(1);
         nextPage = ((ResetPasswordPage) nextPage)
                 .enterEmail(multiple_accounts_user)
                 .clickResetPasswordBtn()

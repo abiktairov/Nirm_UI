@@ -3,7 +3,6 @@ package tests;
 import static io.restassured.RestAssured.get;
 import static io.restassured.RestAssured.given;
 
-import classes.SignIn;
 import framework.NirmataMailer;
 import framework.TestData;
 import io.restassured.response.Response;
@@ -39,9 +38,7 @@ public class UserManagmentTest extends TestSetup {
 
     @Test(alwaysRun = true, description = "Verify if the user can sign in as Nirmata Administrator")
     public void test101() {
-        nextPage = new SignIn(webDriver, applicationURL)
-                .loginNirmataAccount(multiple_accounts_user, user_account, TestData.getUser("user_password", multiple_accounts_user));
-
+        nextPage = signInNirmata(multiple_accounts_user, user_account, TestData.getUser("user_password", multiple_accounts_user));
     }
 
 

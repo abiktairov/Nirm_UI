@@ -7,6 +7,8 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import java.io.IOException;
+
 public class TestListener implements ITestListener {
     private static Logger _logger = LoggerFactory.getLogger(TestListener.class);
 
@@ -27,7 +29,12 @@ public class TestListener implements ITestListener {
         TestSetup.methodInfo.log(Status.FAIL, "Test failure : " + result.getThrowable().getMessage());
         TestSetup.methodInfo.log(Status.FAIL, "Test failure : " + TestSetup.lastException.getMessage());
         String screenshotPath = TestSetup.getScreenshot(TestSetup.webDriver, result.getName());
-        TestSetup.methodInfo.log(Status.FAIL, "<a href='" + screenshotPath + "'>" + "<img src='" + screenshotPath + "' width='75%'></a>");
+//        TestSetup.methodInfo.log(Status.FAIL, "<a href='" + screenshotPath + "'>" + "<img src='" + screenshotPath + "' width='75%'></a>");
+        try {
+            TestSetup.methodInfo.addScreenCaptureFromPath(screenshotPath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

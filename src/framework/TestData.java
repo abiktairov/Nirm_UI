@@ -74,7 +74,7 @@ public class TestData {
         try {
             String path = "$." + key;
             result = JsonPath.read(file, path);
-        } catch (IOException e) {}
+        } catch (Exception e) {TestSetup.lastException = e;}
 
         if (result.length()>0 && result.charAt(0) == '%') {
             result = result.substring(1);

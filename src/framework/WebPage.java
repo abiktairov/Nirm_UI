@@ -88,6 +88,7 @@ public class WebPage {
     }
 
     public WebElement updateElement(String xpath, String value) {
+//        waitAppear(xpath);
         WebElement webElement = getElement(xpath);
         webElement.clear();
         webElement.sendKeys(value);
@@ -95,6 +96,7 @@ public class WebPage {
     }
 
     public WebElement clickElement(String xpath) {
+//        waitAppear(xpath);
         WebElement webElement = getElement(xpath);
         webElement.click();
         return webElement;
@@ -116,5 +118,7 @@ public class WebPage {
     public WebPage assertThat(boolean expectation, String message) {
         return this;
     }
+
+
 
 }

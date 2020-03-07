@@ -116,7 +116,7 @@ public class SignInTestAll extends TestSetup {
     @Test (priority = 1, dependsOnMethods = {"ifResendVerification"}, description = "Verify if valid verification code is accepted.")
     public void ifVerificationAccepted() {
         nextPage = ((VerifyIdentityPage) nextPage)
-                .enterVerificationCode(new NirmataMailer(multiple_accounts_user).getAccessCode(timeStamp, 60, 5))
+                .enterVerificationCode(new NirmataMailer(multiple_accounts_user).getAccessCode(timeStamp, 60, 10))
                 .clickSignInBtn()
                 .assertThat();
     }
@@ -130,7 +130,7 @@ public class SignInTestAll extends TestSetup {
                 .assertThat();
         if (nextPage instanceof VerifyIdentityPage)
             nextPage = ((VerifyIdentityPage) nextPage)
-                    .enterVerificationCode(new NirmataMailer(multiple_accounts_user).getAccessCode(timeStamp, 60, 5))
+                    .enterVerificationCode(new NirmataMailer(multiple_accounts_user).getAccessCode(timeStamp, 60, 10))
                     .clickSignInBtn()
                     .assertThat();
         nextPage = ((SelectAccountPage) nextPage)
@@ -148,7 +148,7 @@ public class SignInTestAll extends TestSetup {
                 .assertThat();
         if (nextPage instanceof VerifyIdentityPage)
             nextPage = ((VerifyIdentityPage) nextPage)
-                    .enterVerificationCode(new NirmataMailer(multiple_accounts_user).getAccessCode(timeStamp, 60, 5))
+                    .enterVerificationCode(new NirmataMailer(multiple_accounts_user).getAccessCode(timeStamp, 60, 10))
                     .clickSignInBtn()
                     .assertThat();
         nextPage = ((SelectAccountPage) nextPage)

@@ -11,7 +11,7 @@
     "start_maximized": "false"
   },
   "appearing_timeout": {
-    "long": "30",
+    "long": "45",
     "short": "15"
   },
   "ChromeDriver": {
