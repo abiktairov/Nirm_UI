@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import webobjects.SignInPage;
 
+import static org.testng.Assert.assertTrue;
+
 public class SignUpPage extends SignInPage {
     private String by_name = "//input[@id='name']";
     private String by_business_email = "//input[@id='email']";
@@ -15,7 +17,7 @@ public class SignUpPage extends SignInPage {
 
     public SignUpPage(WebDriver webDriver) {
         super(webDriver);
-        Assert.assertTrue(waitAppear(by_login_title, text_signUp), "Timeout of pageObject " + this.getClass().getName() + " loading.");
+        assertTrue(waitAppear(by_login_title, text_signUp), "Timeout of pageObject " + this.getClass().getName() + " loading.");
     }
 
     public SignUpPage enterName(String name) {

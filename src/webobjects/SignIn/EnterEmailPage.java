@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import webobjects.SignInPage;
 
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
+
 // verified for v.2.0
 public class EnterEmailPage extends SignInPage {
     private String by_email = "//input[@id='email']";
@@ -16,7 +19,7 @@ public class EnterEmailPage extends SignInPage {
 
     public EnterEmailPage(WebDriver webDriver) {
         super(webDriver);
-        Assert.assertTrue(waitAppear(by_login_title, text_login), "Timeout of pageObject " + this.getClass().getName() + " appearing.");
+        assertTrue(waitAppear(by_login_title, text_login), "Timeout of pageObject " + this.getClass().getName() + " appearing.");
     }
 
     public EnterEmailPage enterEmail(String email) {
@@ -46,8 +49,8 @@ public class EnterEmailPage extends SignInPage {
     }
 
     public WebPage assertThat(boolean expectation, String message) {
-        if (expectation) Assert.assertTrue(waitDisappear(by_login_title, text_login), message);
-        else             Assert.assertFalse(waitDisappear(by_login_title, text_login), message);
+        if (expectation) assertTrue(waitDisappear(by_login_title, text_login), message);
+        else             assertFalse(waitDisappear(by_login_title, text_login), message);
         return dispatchClass();
     }
 

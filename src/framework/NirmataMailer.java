@@ -127,8 +127,11 @@ public class NirmataMailer {
             folder.open(Folder.READ_WRITE);
             messages = folder.search(new SubjectTerm(checkSubj), folder.search(new FromStringTerm(checkFrom)));
             for (int i = messages.length - 1; i >= 0; i--) {
-                result.add(new ShortMessage(messages[i].getSentDate(), messages[i].getContent().toString()));
-                messages[i].setFlag(Flags.Flag.DELETED, true);
+                ShortMessage shortMessage = new ShortMessage(messages[i].getSentDate(), messages[i].getContent().toString());
+                result.add(shortMessage);
+                // delete messages sent more then 1 hour ago
+                if (shortMessage.sentDate.getTime() < new Date().getTime() - 3600000)
+                    messages[i].setFlag(Flags.Flag.DELETED, true);
             }
             folder.close(true);
             store.close();

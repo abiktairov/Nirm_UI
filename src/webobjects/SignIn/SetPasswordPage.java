@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import webobjects.SignInPage;
 
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
+
 // verified for v.2.0
 public class SetPasswordPage extends SignInPage {
     private String by_password = "//input[@id='password']";
@@ -18,7 +21,7 @@ public class SetPasswordPage extends SignInPage {
 
     public SetPasswordPage(WebDriver webDriver) {
         super(webDriver);
-        Assert.assertTrue(waitAppear(by_login_title, text_setPasswordPage), "Timeout of pageObject " + this.getClass().getName() + " loading.");
+        assertTrue(waitAppear(by_login_title, text_setPasswordPage), "Timeout of pageObject " + this.getClass().getName() + " loading.");
     }
 
     public SetPasswordPage enterPassword(String password) {
@@ -42,14 +45,14 @@ public class SetPasswordPage extends SignInPage {
     }
 
     public SetPasswordPage assertPasswordConfirmation(boolean expectation, String message) {
-        if (expectation) Assert.assertTrue(waitDisappear(by_resetBtn) && waitAppear(by_confirmation_text), message);
-        else             Assert.assertFalse(waitDisappear(by_resetBtn) && waitAppear(by_confirmation_text), message);
+        if (expectation) assertTrue(waitDisappear(by_resetBtn) && waitAppear(by_confirmation_text), message);
+        else             assertFalse(waitDisappear(by_resetBtn) && waitAppear(by_confirmation_text), message);
         return this;
     }
 
     public WebPage assertThat(boolean expectation, String message) {
-        if (expectation) Assert.assertTrue(waitDisappear(by_login_title, text_setPasswordPage), message);
-        else             Assert.assertFalse(waitDisappear(by_login_title, text_setPasswordPage), message);
+        if (expectation) assertTrue(waitDisappear(by_login_title, text_setPasswordPage), message);
+        else             assertFalse(waitDisappear(by_login_title, text_setPasswordPage), message);
         return dispatchClass();
     }
 

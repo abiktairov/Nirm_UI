@@ -8,6 +8,8 @@ import webobjects.MainApplicationPage;
 
 import org.testng.Assert;
 
+import static org.testng.Assert.assertTrue;
+
 public class MainMenuPage extends MainApplicationPage {
     String by_navbar_with_username = "//div[contains(@class,'navbar')]//span[contains(@class,'username')]";
 //    String by_menu_item = "//div[contains(@class,'main-navigation')]//span[contains(text(),'__param__')]";
@@ -17,7 +19,7 @@ public class MainMenuPage extends MainApplicationPage {
 
     public MainMenuPage(WebDriver webDriver) {
         super(webDriver);
-        Assert.assertTrue(waitAppear(by_navbar_with_username), "Timeout of pageObject " + this.getClass().getName() + " loading.");
+        assertTrue(waitAppear(by_navbar_with_username), "Timeout of pageObject " + this.getClass().getName() + " loading.");
     }
 
     public WebPage selectMenuItem(String s) {

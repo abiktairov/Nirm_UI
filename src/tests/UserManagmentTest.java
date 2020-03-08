@@ -2,13 +2,16 @@ package tests;
 
 import static io.restassured.RestAssured.get;
 import static io.restassured.RestAssured.given;
+import static org.junit.Assume.assumeTrue;
 
 import framework.NirmataMailer;
 import framework.TestData;
 import io.restassured.response.Response;
 
 import framework.TestSetup;
+import org.junit.Assume;
 import org.testng.Assert;
+import org.testng.SkipException;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -23,9 +26,7 @@ public class UserManagmentTest extends TestSetup {
     private String user_account;
 
     @BeforeClass
-    public void beforeClass() {
-        nextPage = forceLogout();
-    }
+    public void beforeClass() { nextPage = forceLogout(); }
 
     @BeforeMethod
     public void beforeMethod() { timeStamp = new Date(); }
@@ -37,7 +38,11 @@ public class UserManagmentTest extends TestSetup {
     }
 
     @Test(alwaysRun = true, description = "Verify if the user can sign in as Nirmata Administrator")
-    public void test101() {
+    public void ifUserAdministrator() {
+        // this test class limited for execution in devtest2 environment only. Remove it when you are ready.
+        if (!applicationURL.contains("devtest2"))
+            throw new SkipException("Test class is skipped because it's not a devtest2 environment");
+
         nextPage = signInNirmata(multiple_accounts_user, user_account, TestData.getUser("user_password", multiple_accounts_user));
     }
 

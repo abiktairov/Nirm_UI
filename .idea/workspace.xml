@@ -2,38 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d592c2b-3bee-431a-b5ff-a721e764b5c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/reports/20200305042154.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200305040515/ifVerificationAccepted.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200305042154/ifSigninNewPassword.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200305042154/ifVerificationAccepted.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200305042154/test101.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/20200308013033.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/20200308020403.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200308013033/test101.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200308020403/ifUserAdministrator.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nirm_UI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Nirm_UI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/SignIn.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/diagram.uml" beforeDir="false" afterPath="$PROJECT_DIR$/src/diagram.uml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/framework/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/TestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/framework/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/TestListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/framework/TestSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/TestSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/framework/NirmataMailer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/NirmataMailer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/framework/WebPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/WebPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests/ResetPasswordTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/ResetPasswordTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/SignInTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests/SignInTestAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/SignInTestAll.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests/UserManagmentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/UserManagmentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/classes/SignIn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/diagram.uml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/framework/TestData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/framework/TestData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/framework/TestListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/framework/TestListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webobjects/MainApplication/GetStartedPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/MainApplication/GetStartedPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webobjects/MainApplication/MainMenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/MainApplication/MainMenuPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webobjects/MainApplicationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/MainApplicationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/EnterEmailPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/EnterEmailPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/EnterPasswordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/EnterPasswordPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/ResetPasswordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/ResetPasswordPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/SelectAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/SelectAccountPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/SelectAccountResetPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/SelectAccountResetPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/SetPasswordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/SetPasswordPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/SignUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/SignUpPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/VerifyIdentityPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/VerifyIdentityPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webobjects/SignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignInPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/framework/NirmataMailer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/framework/NirmataMailer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/framework/TestSetup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/framework/TestSetup.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/framework/WebPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/framework/WebPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/tests/ResetPasswordTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/ResetPasswordTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tests/SignInTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/tests/SignInTestAll.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/SignInTestAll.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/tests/UserManagmentTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/UserManagmentTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/properties.json" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/properties.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/MainApplication/GetStartedPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/MainApplication/GetStartedPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/MainApplication/MainMenuPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/MainApplication/MainMenuPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/MainApplicationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/MainApplicationPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/EnterEmailPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/EnterEmailPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/EnterPasswordPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/EnterPasswordPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/ResetPasswordPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/ResetPasswordPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/SelectAccountPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/SelectAccountPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/SelectAccountResetPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/SelectAccountResetPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/SetPasswordPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/SetPasswordPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/SignUpPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/SignUpPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/VerifyIdentityPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/VerifyIdentityPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignInPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignInPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SignIn.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SignIn.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -199,10 +207,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583134989017" />
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1583381172800">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1583659109979">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583374471746" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583659109979" />
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583201423730" />
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1583381172800" />
     <state x="592" y="212" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1582079245794">
@@ -242,28 +250,28 @@
     </state>
     <state x="740" y="252" key="FileChooserDialogImpl/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583028356223" />
     <state x="740" y="252" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582746779461" />
-    <state width="1877" height="298" key="GridCell.Tab.0.bottom" timestamp="1583520021157">
+    <state width="1877" height="298" key="GridCell.Tab.0.bottom" timestamp="1583662791972">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="342" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583387715815" />
+    <state width="1877" height="298" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583662791971" />
     <state width="1877" height="298" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583520021157" />
     <state width="1877" height="298" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583455173619" />
-    <state width="1877" height="298" key="GridCell.Tab.0.center" timestamp="1583520021157">
+    <state width="1877" height="298" key="GridCell.Tab.0.center" timestamp="1583662791971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="342" key="GridCell.Tab.0.center/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583387715814" />
+    <state width="1877" height="298" key="GridCell.Tab.0.center/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583662791971" />
     <state width="1877" height="298" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583520021157" />
     <state width="1877" height="298" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583455173619" />
-    <state width="1877" height="298" key="GridCell.Tab.0.left" timestamp="1583520021157">
+    <state width="1877" height="298" key="GridCell.Tab.0.left" timestamp="1583662791971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="342" key="GridCell.Tab.0.left/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583387715814" />
+    <state width="1877" height="298" key="GridCell.Tab.0.left/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583662791971" />
     <state width="1877" height="298" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583520021157" />
     <state width="1877" height="298" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583455173619" />
-    <state width="1877" height="298" key="GridCell.Tab.0.right" timestamp="1583520021157">
+    <state width="1877" height="298" key="GridCell.Tab.0.right" timestamp="1583662791971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="342" key="GridCell.Tab.0.right/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583387715815" />
+    <state width="1877" height="298" key="GridCell.Tab.0.right/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583662791971" />
     <state width="1877" height="298" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583520021157" />
     <state width="1877" height="298" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583455173619" />
     <state width="1877" height="342" key="GridCell.Tab.1.bottom" timestamp="1583451232641">
@@ -302,6 +310,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="776" y="301" key="chooseDestDirectoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582153542232" />
+    <state x="1085" y="185" width="586" height="488" key="find.popup" timestamp="1583659750228">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1085" y="185" width="586" height="488" key="find.popup/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583659750228" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1583009515591">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

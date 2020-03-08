@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import webobjects.SignInPage;
 
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
+
 // verified for v.2.0
 public class VerifyIdentityPage extends SignInPage {
     private String by_verificationCode = "//input[@id='password']";
@@ -15,7 +18,7 @@ public class VerifyIdentityPage extends SignInPage {
 
     public VerifyIdentityPage(WebDriver webDriver) {
         super(webDriver);
-        Assert.assertTrue(waitAppear(by_login_title, text_verifyIdentity), "Timeout of pageObject " + this.getClass().getName() + " loading.");
+        assertTrue(waitAppear(by_login_title, text_verifyIdentity), "Timeout of pageObject " + this.getClass().getName() + " loading.");
     }
 
     public VerifyIdentityPage enterVerificationCode(String veridicationCode) {
@@ -34,8 +37,8 @@ public class VerifyIdentityPage extends SignInPage {
     }
 
     public WebPage assertThat(boolean expectation, String message) {
-        if (expectation) Assert.assertTrue(waitDisappear(by_login_title, text_verifyIdentity), message);
-        else             Assert.assertFalse(waitDisappear(by_login_title, text_verifyIdentity), message);
+        if (expectation) assertTrue(waitDisappear(by_login_title, text_verifyIdentity), message);
+        else             assertFalse(waitDisappear(by_login_title, text_verifyIdentity), message);
         return dispatchClass();
     }
 }

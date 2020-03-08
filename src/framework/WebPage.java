@@ -9,7 +9,7 @@ import org.testng.Assert;
 
 import java.util.List;
 
-public class WebPage {
+public abstract class WebPage {
     private static final int LONG_TIMEOUT = 30;     // using for expected appearing (may take longer time)
     private static final int SHORT_TIMEOUT = 5;     // using for expected disappearing (usually shorter)
     private static int POLLING = 1000;
@@ -115,10 +115,6 @@ public class WebPage {
     }
 
     // MUST BE OVERRIDDEN!
-    public WebPage assertThat(boolean expectation, String message) {
-        return this;
-    }
-
-
+    public abstract WebPage assertThat(boolean expectation, String message);
 
 }

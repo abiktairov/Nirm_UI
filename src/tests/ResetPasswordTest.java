@@ -9,6 +9,9 @@ import webobjects.SignIn.*;
 
 import java.util.Date;
 
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
+
 public class ResetPasswordTest extends TestSetup {
 //    private WebPage nextPage;
     private Date timeStamp;
@@ -55,7 +58,7 @@ public class ResetPasswordTest extends TestSetup {
                 .assertThat();
 
         passwordResetLink = new NirmataMailer(multiple_accounts_user).getPasswordResetLink(timeStamp, 60, 5);
-        Assert.assertFalse(passwordResetLink.isEmpty(), "Password reset link is invalid!");
+        assertFalse(passwordResetLink.isEmpty(), "Password reset link is invalid!");
     }
 
     @Test (dependsOnMethods = {"ifLinkAvailable"}, description = "Verify if user can select account to reset password.")
@@ -74,10 +77,10 @@ public class ResetPasswordTest extends TestSetup {
                 .enterPasswordConfirmation("")
                 .clicResetPasswordBtn()
                 .assertPasswordConfirmation(false, "Empty password has been accepted!");
-        Assert.assertFalse(((SetPasswordPage) nextPage).getPasswordErrorMessage().isEmpty(), "There's no error message for empty password!");
-        Assert.assertFalse(((SetPasswordPage) nextPage).getConfirmationErrorMessage().isEmpty(), "There's no error message for empty confirmation!");
-        Assert.assertTrue(((SetPasswordPage) nextPage).getPasswordErrorMessage().contains("Please enter a value for this field"), "Error message text is not correct!");
-        Assert.assertTrue(((SetPasswordPage) nextPage).getConfirmationErrorMessage().contains("Please enter a value for this field"), "Error message text is not correct!");
+        assertFalse(((SetPasswordPage) nextPage).getPasswordErrorMessage().isEmpty(), "There's no error message for empty password!");
+        assertFalse(((SetPasswordPage) nextPage).getConfirmationErrorMessage().isEmpty(), "There's no error message for empty confirmation!");
+        assertTrue(((SetPasswordPage) nextPage).getPasswordErrorMessage().contains("Please enter a value for this field"), "Error message text is not correct!");
+        assertTrue(((SetPasswordPage) nextPage).getConfirmationErrorMessage().contains("Please enter a value for this field"), "Error message text is not correct!");
     }
 
     @Test (dependsOnMethods = {"ifSetEmptyPassword"}, description = "Verify if user cannot set valid password with invalid confirmation.")
@@ -89,8 +92,8 @@ public class ResetPasswordTest extends TestSetup {
                 .enterPasswordConfirmation(newInvalidPassword)
                 .clicResetPasswordBtn()
                 .assertPasswordConfirmation(false, "Password not matched with confirmation has been accepted!");
-        Assert.assertFalse(((SetPasswordPage) nextPage).getConfirmationErrorMessage().isEmpty(), "There's no error message for unmatched passwords!");
-        Assert.assertTrue(((SetPasswordPage) nextPage).getConfirmationErrorMessage().contains("The passwords do not match"), "Error message text is not correct!");
+        assertFalse(((SetPasswordPage) nextPage).getConfirmationErrorMessage().isEmpty(), "There's no error message for unmatched passwords!");
+        assertTrue(((SetPasswordPage) nextPage).getConfirmationErrorMessage().contains("The passwords do not match"), "Error message text is not correct!");
     }
 
 //    @Test (dependsOnMethods = {"ifPasswordNotMatch"}, description = "Verify ...   any other combinations of passwords ...")
@@ -134,7 +137,7 @@ public class ResetPasswordTest extends TestSetup {
                 .clickResetPasswordBtn()
                 .assertThat();
         passwordResetLink = new NirmataMailer(multiple_accounts_user).getPasswordResetLink(timeStamp, 60, 5);
-        Assert.assertFalse(passwordResetLink.isEmpty(), "Password reset link is invalid!");
+        assertFalse(passwordResetLink.isEmpty(), "Password reset link is invalid!");
         webDriver.get(passwordResetLink);
         nextPage = new SelectAccountResetPage(webDriver);
         nextPage = ((SelectAccountResetPage) nextPage)

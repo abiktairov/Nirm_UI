@@ -10,6 +10,9 @@ import webobjects.SignIn.*;
 
 import java.util.Date;
 
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
+
 public class SignInTestAll extends TestSetup {
 //    private WebPage nextPage; // = signIn.getNextPage();
     private Date timeStamp;
@@ -48,8 +51,8 @@ public class SignInTestAll extends TestSetup {
         nextPage = ((EnterEmailPage) nextPage).enterEmail("")
                 .clickSignInBtn()
                 .assertThat(false, "Empty email has been accepted!");
-        Assert.assertFalse(((EnterEmailPage) nextPage).getErrorMessage().isEmpty(), "There's no error message!");
-        Assert.assertTrue(((EnterEmailPage) nextPage).getErrorMessage().contains("Please enter a value for this field"), "Error message text is not correct!");
+        assertFalse(((EnterEmailPage) nextPage).getErrorMessage().isEmpty(), "There's no error message!");
+        assertTrue(((EnterEmailPage) nextPage).getErrorMessage().contains("Please enter a value for this field"), "Error message text is not correct!");
     }
 
     @Test (alwaysRun = true, description = "Verify if unregistered email is not accepted and error message appears.")
@@ -59,8 +62,8 @@ public class SignInTestAll extends TestSetup {
                 .enterEmail(not_registered_user)
                 .clickSignInBtn()
                 .assertThat(false, "Unregistered user email has been accepted!");
-        Assert.assertFalse(((EnterEmailPage) nextPage).getErrorMessage().isEmpty(), "There's no error message!");
-        Assert.assertTrue(((EnterEmailPage) nextPage).getErrorMessage().contains("We could not find an account with that email."), "Error message text is not correct!");
+        assertFalse(((EnterEmailPage) nextPage).getErrorMessage().isEmpty(), "There's no error message!");
+        assertTrue(((EnterEmailPage) nextPage).getErrorMessage().contains("We could not find an account with that email."), "Error message text is not correct!");
     }
 
     @Test (alwaysRun = true, description = "Verify if invalid email is not accepted and error message appears.")
@@ -70,8 +73,8 @@ public class SignInTestAll extends TestSetup {
                 .enterEmail(wrong_format_email)
                 .clickSignInBtn()
                 .assertThat(false, "Invalid user email has been accepted!");
-        Assert.assertFalse(((EnterEmailPage) nextPage).getErrorMessage().isEmpty(),"There's no error message!");
-        Assert.assertTrue(((EnterEmailPage) nextPage).getErrorMessage().contains("Invalid email address"),"Error message text is not correct!");
+        assertFalse(((EnterEmailPage) nextPage).getErrorMessage().isEmpty(),"There's no error message!");
+        assertTrue(((EnterEmailPage) nextPage).getErrorMessage().contains("Invalid email address"),"Error message text is not correct!");
 }
 
     @Test (alwaysRun = true, description = "Verify if 'Remember me' checkbox is worked and valid email is accepted.")
@@ -92,7 +95,7 @@ public class SignInTestAll extends TestSetup {
         nextPage = ((EnterEmailPage) nextPage)
                 .clickSignUpLink()
                 .assertThat();
-        Assert.assertTrue(nextPage instanceof SignUpPage, "'Sign up for Nirmata account' link does not lead to Sign Up web page!");
+        assertTrue(nextPage instanceof SignUpPage, "'Sign up for Nirmata account' link does not lead to Sign Up web page!");
     }
 
     @Test (priority = 1, alwaysRun = true, description = "Verify if user cannot login with invalid verification code.")
@@ -110,7 +113,7 @@ public class SignInTestAll extends TestSetup {
 
     @Test (priority = 1, dependsOnMethods = {"ifInvalidVerification"}, description = "Verify if user can resend verification code.")
     public void ifResendVerification() {
-        Assert.assertTrue(((VerifyIdentityPage) nextPage).clickResendCodeLink(), "There was no confirmation for sending code!");
+        assertTrue(((VerifyIdentityPage) nextPage).clickResendCodeLink(), "There was no confirmation for sending code!");
     }
 
     @Test (priority = 1, dependsOnMethods = {"ifResendVerification"}, description = "Verify if valid verification code is accepted.")
@@ -136,7 +139,7 @@ public class SignInTestAll extends TestSetup {
         nextPage = ((SelectAccountPage) nextPage)
                 .clickUseDifferentEmailLink()
                 .assertThat();
-        Assert.assertTrue(nextPage instanceof EnterEmailPage,"'Use a different email address' does not lead to 'Sign In to Nirmata' web page!");
+        assertTrue(nextPage instanceof EnterEmailPage,"'Use a different email address' does not lead to 'Sign In to Nirmata' web page!");
     }
 
     @Test (priority = 2, alwaysRun = true, description = "Verify if user can select account from 'Select an Account' page.")
@@ -167,8 +170,8 @@ public class SignInTestAll extends TestSetup {
                 .enterPassword("")
                 .clickSignInBtn()
                 .assertThat(false, "Empty password has been accepted!");
-        Assert.assertFalse(((EnterPasswordPage) nextPage).getErrorMessage().isEmpty(), "There's no error message!");
-        Assert.assertTrue(((EnterPasswordPage) nextPage).getErrorMessage().contains("Invalid password. Please try again."), "Error message text is not correct!");
+        assertFalse(((EnterPasswordPage) nextPage).getErrorMessage().isEmpty(), "There's no error message!");
+        assertTrue(((EnterPasswordPage) nextPage).getErrorMessage().contains("Invalid password. Please try again."), "Error message text is not correct!");
     }
 
     @Test (priority = 3, dependsOnMethods = {"ifEmptyPassword"}, description = "Verify if invalid password is not accepted and error message appears.")
@@ -177,8 +180,8 @@ public class SignInTestAll extends TestSetup {
                 .enterPassword(wrong_password)
                 .clickSignInBtn()
                 .assertThat(false, "Inalid password has been accepted!");
-        Assert.assertFalse(((EnterPasswordPage) nextPage).getErrorMessage().isEmpty(), "There's no error message!");
-        Assert.assertTrue(((EnterPasswordPage) nextPage).getErrorMessage().contains("Invalid password. Please try again."), "Error message text is not correct!");
+        assertFalse(((EnterPasswordPage) nextPage).getErrorMessage().isEmpty(), "There's no error message!");
+        assertTrue(((EnterPasswordPage) nextPage).getErrorMessage().contains("Invalid password. Please try again."), "Error message text is not correct!");
     }
 
     @Test (priority = 4, dependsOnMethods = {"ifEmptyPassword"}, description = "Verify if user can run password resetting.")
@@ -186,7 +189,7 @@ public class SignInTestAll extends TestSetup {
         nextPage = ((EnterPasswordPage) nextPage)
                 .clickForgotYourPasswordLink()
                 .assertThat();
-        Assert.assertTrue(nextPage instanceof ResetPasswordPage,"'Forgot your password' does not lead to 'Reset your password' web page!");
+        assertTrue(nextPage instanceof ResetPasswordPage,"'Forgot your password' does not lead to 'Reset your password' web page!");
     }
 
     @Test (priority = 5, description = "Verify if valid password is accepted.")
@@ -200,7 +203,7 @@ public class SignInTestAll extends TestSetup {
                 .enterPassword(TestData.getUser("user_password", single_account_user))
                 .clickSignInBtn()
                 .assertThat();
-        Assert.assertTrue(nextPage instanceof MainApplicationPage,"Main Application page is not loaded, looks like password is not accepted!");
+        assertTrue(nextPage instanceof MainApplicationPage,"Main Application page is not loaded, looks like password is not accepted!");
     }
 
 }
