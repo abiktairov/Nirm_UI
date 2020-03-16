@@ -12,9 +12,12 @@ import static org.testng.Assert.assertTrue;
 public class SetPasswordPage extends SignInPage {
     private String by_password = "//input[@id='password']";
     private String by_confirm_password = "//input[@id='confirmPassword']";
-    private String by_resetBtn = "//button[contains(.,'Reset Password')]";
-    private String by_confirmation_text = "//div[@class='login-block']//p[contains(text(),'Your password has been reset.')]";
-    private String by_signInBtn = "//button[contains(.,'SIGN IN TO NIRMATA')]";
+    private String by_resetBtn = "//button[@action='setPassword']";
+//    private String by_confirmation_text = "//div[@class='login-block']//p[contains(text(),'Your password has been reset.')]";
+    // compromise between 'reset.' in Production and 'set.' in devtest2
+    private String by_confirmation_text = "//div[@class='login-block']//p[contains(text(),'Your password has been ')]";
+//    private String by_signInBtn = "//button[contains(.,'SIGN IN TO NIRMATA')]";
+    private String by_signInBtn = "//button[@type='submit']";
     private String by_help_block_password = "//input[@id='password']/../..//p[@class='help-block']";
     private String by_help_block_confirmation = "//input[@id='confirmPassword']/../..//p[@class='help-block']";
     private String by_form_error = "//p[@id='form-errors']";

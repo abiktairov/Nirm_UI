@@ -31,7 +31,7 @@
 		<classes>
 			<class name="tests.SignInTestAll">
 				<methods>
-					<exclude name=".*"/>
+<!--					<exclude name=".*"/>-->
 				</methods>
 			</class>
 		</classes>
@@ -41,7 +41,7 @@
 		<classes>
 			<class name="tests.ResetPasswordTest">
 				<methods>
-					<exclude name=".*"/>
+<!--					<exclude name=".*"/>-->
 				</methods>
 			</class>
 		</classes>
@@ -49,6 +49,7 @@
 
 	<test thread-count="1" name="User management test cases'">
 		<parameter name="user_account" value="Sign in as Nirmata Administrator" />
+		<parameter name="new_tenant_user" value="nirmautomated101@gmail.com" />
 
 		<classes>
 			<class name="tests.UserManagmentTest">

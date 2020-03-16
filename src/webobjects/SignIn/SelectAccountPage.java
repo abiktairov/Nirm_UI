@@ -10,7 +10,7 @@ import static org.testng.Assert.assertTrue;
 
 // verified for v.2.0
 public class SelectAccountPage extends SignInPage {
-    private String by_selectAccount = "//*[contains(@class,'text-primary')]//*[.='__param__']";     // parametrized locator
+    private String by_selectAccount = "//div[@id='accounts']//b[text()='__param__']";     // parametrized locator
     private String by_another_email_link = "//a[@id='showEmailForm']";
 
 

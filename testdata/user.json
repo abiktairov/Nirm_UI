@@ -43,35 +43,5 @@
     "user_role": "admin",
     "user_id_provider": "Nirmata",
     "user_teams": ""
-  },
-  {
-    "_comment": "Testing account using for the tests. Account created but not verified.",
-    "email": "nirmautomated101@yahoo.com",
-    "email_password": "%PASS%",
-    "email_host": "imap.mail.yahoo.com",
-    "email_protocol": "imaps",
-    "company_name": "Nirmata Test Co Ltd",
-    "user_phone": "+1 (695) 458-23674",
-    "email_folder": "Inbox",
-    "user_password": "%PASS%",
-    "user_name": "Yahoo Autotest",
-    "user_role": "admin",
-    "user_id_provider": "Nirmata",
-    "user_teams": ""
-  },
-  {
-    "_comment": "Testing account using for the tests. Account created but not verified.",
-    "email": "nirmautomated101@mail.ru",
-    "email_password": "%PASS%",
-    "email_host": "imap.mail.ru",
-    "email_protocol": "imaps",
-    "email_folder": "inbox",
-    "company_name": "Nirmata Test Co Ltd",
-    "user_phone": "+1 (695) 458-23674",
-    "user_password": "%PASS%",
-    "user_name": "Mailru Autotest",
-    "user_role": "admin",
-    "user_id_provider": "Nirmata",
-    "user_teams": ""
   }
 ]

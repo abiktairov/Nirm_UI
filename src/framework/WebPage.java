@@ -1,9 +1,12 @@
 package framework;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -88,18 +91,24 @@ public abstract class WebPage {
     }
 
     public WebElement updateElement(String xpath, String value) {
-//        waitAppear(xpath);
+        shortWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
         WebElement webElement = getElement(xpath);
-        webElement.clear();
-        webElement.sendKeys(value);
+        webElement.clear();  webElement.sendKeys(value);
         return webElement;
     }
 
     public WebElement clickElement(String xpath) {
-//        waitAppear(xpath);
+        shortWait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
         WebElement webElement = getElement(xpath);
         webElement.click();
         return webElement;
+    }
+
+    public String getHttpCookies() {
+        String result = "";
+        for (Cookie coo : webDriver.manage().getCookies())
+            if (coo.isHttpOnly()) result += coo.getName() + "=" + coo.getValue() + ";";
+        return result;
     }
 
     protected WebPage dispatchClass() {

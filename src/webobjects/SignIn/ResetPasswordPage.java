@@ -11,7 +11,7 @@ import static org.testng.Assert.assertTrue;
 // verified for v.2.0
 public class ResetPasswordPage extends SignInPage {
     private String by_email = "//input[@id='email']";
-    private String by_resetBtn = "//button[contains(.,'Reset Password')]";
+    private String by_resetBtn = "//button[@action='resetPassword']";
     private String by_confirmation_text = "//*[contains(text(),'Your request has been submitted.')]";
 
 

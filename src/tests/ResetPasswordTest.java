@@ -49,7 +49,7 @@ public class ResetPasswordTest extends TestSetup {
                 .assertThat();
     }
 
-    @Test (dependsOnMethods = {"ifResetPageAccessable"}, description = "Verify if link to reset password can be obtained.")
+    @Test (dependsOnMethods = {"ifResetPageAccessable"}, description = "Verify if link to reset password can be received.")
     public void ifLinkAvailable() {
         justWait(1);
         nextPage = ((ResetPasswordPage) nextPage)
@@ -57,7 +57,7 @@ public class ResetPasswordTest extends TestSetup {
                 .clickResetPasswordBtn()
                 .assertThat();
 
-        passwordResetLink = new NirmataMailer(multiple_accounts_user).getPasswordResetLink(timeStamp, 60, 5);
+        passwordResetLink = new NirmataMailer(multiple_accounts_user).getPasswordResetLink(applicationURL, timeStamp, 60, 5);
         assertFalse(passwordResetLink.isEmpty(), "Password reset link is invalid!");
     }
 
@@ -107,7 +107,8 @@ public class ResetPasswordTest extends TestSetup {
         nextPage = ((SetPasswordPage) nextPage)
                 .enterPassword(newValidPassword)
                 .enterPasswordConfirmation(newValidPassword)
-                .clicResetPasswordBtn().assertPasswordConfirmation(true, "Confirmation message has not appeared.")
+                .clicResetPasswordBtn()
+                .assertPasswordConfirmation(true, "Confirmation message has not appeared.")
                 .clicSignInBtn()
                 .assertThat();
     }
@@ -136,7 +137,7 @@ public class ResetPasswordTest extends TestSetup {
                 .enterEmail(multiple_accounts_user)
                 .clickResetPasswordBtn()
                 .assertThat();
-        passwordResetLink = new NirmataMailer(multiple_accounts_user).getPasswordResetLink(timeStamp, 60, 5);
+        passwordResetLink = new NirmataMailer(multiple_accounts_user).getPasswordResetLink(applicationURL, timeStamp, 60, 5);
         assertFalse(passwordResetLink.isEmpty(), "Password reset link is invalid!");
         webDriver.get(passwordResetLink);
         nextPage = new SelectAccountResetPage(webDriver);

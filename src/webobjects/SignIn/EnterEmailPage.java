@@ -23,8 +23,7 @@ public class EnterEmailPage extends SignInPage {
     }
 
     public EnterEmailPage enterEmail(String email) {
-        getElement(by_email).clear();
-        getElement(by_email).sendKeys(email);
+        updateElement(by_email, email);
         return this;
     }
 
@@ -39,12 +38,12 @@ public class EnterEmailPage extends SignInPage {
     }
 
     public EnterEmailPage clickSignUpLink() {
-        getElement(by_signup_link).click();
+        clickElement(by_signup_link);
         return this;
     }
 
     public EnterEmailPage clickSignInBtn() {
-        getElement(by_loginBtn).click();
+        clickElement(by_loginBtn);
         return this;
     }
 

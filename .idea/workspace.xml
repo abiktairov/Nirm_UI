@@ -2,52 +2,81 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d592c2b-3bee-431a-b5ff-a721e764b5c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/reports/20200308013033.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/20200308020403.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200308013033/test101.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200308020403/ifUserAdministrator.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/20200308014113.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/20200308094240.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/20200308101527.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/20200308112629.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/20200308113316.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/20200309085843.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/20200309090052.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/20200310093940.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/20200310094046.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/20200310094438.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/20200310112436.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/20200310113006.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/20200311011806.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/20200311024528.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/20200311025227.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/20200311030026.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/20200311030528.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/20200311103801.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/20200311110834.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/20200311112437.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/20200311114611.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200308094240/ifUserAdministrator.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200308101527/ifUserAdministrator.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200308112629/ifUserAdministrator.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200308113316/ifUserAdministrator.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200309085843/ifTenantCanBeDeleted.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200310093940/ifSignUp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200310094046/ifAccountActivated.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200310094438/ifSignUp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200310112436/ifSignUp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200310113006/ifSignUp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200311011806/ifResetSuccess.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200311011806/ifSignUp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200311024528/ifSignUp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200311025227/ifSigninNewPassword.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200311025227/ifTenantCanBeDeleted.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200311030026/ifSigninNewPassword.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200311103801/ifSelectAccount.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200311103801/ifSignUp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200311110834/ifSetEmptyPassword.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200311110834/ifSignUp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200311112437/ifLinkAvailable.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200311112437/ifSignUp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200311114611/ifResetSuccess.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/screenshots/20200311114611/ifSignUp.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/diagram.uml" beforeDir="false" afterPath="$PROJECT_DIR$/src/diagram.uml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/framework/NirmataMailer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/NirmataMailer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/framework/WebPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/WebPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests/ResetPasswordTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/ResetPasswordTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/SignInTestAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/SignInTestAll.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests/UserManagmentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/UserManagmentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webobjects/MainApplication/GetStartedPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/MainApplication/GetStartedPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webobjects/MainApplication/MainMenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/MainApplication/MainMenuPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webobjects/MainApplicationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/MainApplicationPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/EnterEmailPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/EnterEmailPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/EnterPasswordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/EnterPasswordPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/ResetPasswordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/ResetPasswordPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/SelectAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/SelectAccountPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/SelectAccountResetPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/SelectAccountResetPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/SetPasswordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/SetPasswordPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/SignUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/SignUpPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webobjects/SignIn/VerifyIdentityPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignIn/VerifyIdentityPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webobjects/SignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/webobjects/SignInPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/framework/NirmataMailer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/framework/NirmataMailer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/framework/TestSetup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/framework/TestSetup.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/framework/WebPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/framework/WebPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/tests/ResetPasswordTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/ResetPasswordTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tests/SignInTestAll.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/SignInTestAll.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/tests/UserManagmentTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/UserManagmentTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/MainApplication/GetStartedPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/MainApplication/GetStartedPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/MainApplication/MainMenuPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/MainApplication/MainMenuPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/MainApplicationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/MainApplicationPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/EnterEmailPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/EnterEmailPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/EnterPasswordPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/EnterPasswordPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/ResetPasswordPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/ResetPasswordPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/SelectAccountPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/SelectAccountPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/SelectAccountResetPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/SelectAccountResetPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/SetPasswordPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/SetPasswordPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/SignUpPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/SignUpPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignIn/VerifyIdentityPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignIn/VerifyIdentityPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/webobjects/SignInPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webobjects/SignInPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testdata/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/user.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SignIn.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SignIn.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Nirm_UI" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -177,6 +206,8 @@
       <workItem from="1583368554732" duration="17218000" />
       <workItem from="1583394911715" duration="4582000" />
       <workItem from="1583435114504" duration="27805000" />
+      <workItem from="1583975318598" duration="1796000" />
+      <workItem from="1584310666438" duration="1222000" />
     </task>
     <servers />
   </component>
@@ -232,15 +263,20 @@
     </state>
     <state x="655" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583084510668" />
     <state x="655" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582747103104" />
-    <state x="870" y="273" width="471" height="494" key="#xdebugger.XInspectDialog" timestamp="1583265125978">
+    <state x="870" y="273" width="605" height="494" key="#xdebugger.XInspectDialog" timestamp="1583735084809">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="870" y="273" width="605" height="494" key="#xdebugger.XInspectDialog/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583735084809" />
     <state x="870" y="273" width="471" height="494" key="#xdebugger.XInspectDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583265125978" />
-    <state x="485" y="334" width="977" height="601" key="#xdebugger.evaluate" timestamp="1583439182408">
+    <state x="907" y="404" width="977" height="636" key="#xdebugger.evaluate" timestamp="1583865327913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="762" y="426" width="977" height="601" key="#xdebugger.evaluate/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583385999959" />
+    <state x="907" y="404" width="977" height="636" key="#xdebugger.evaluate/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583865327913" />
     <state x="485" y="334" width="1300" height="582" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583439182408" />
+    <state width="419" height="466" key="DebuggerActiveHint" timestamp="1583736023885">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="419" height="466" key="DebuggerActiveHint/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583736023885" />
     <state x="694" y="285" key="EnvironmentVariablesDialog" timestamp="1582248238307">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -250,52 +286,60 @@
     </state>
     <state x="740" y="252" key="FileChooserDialogImpl/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583028356223" />
     <state x="740" y="252" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582746779461" />
-    <state width="1877" height="298" key="GridCell.Tab.0.bottom" timestamp="1583662791972">
+    <state width="1877" height="298" key="GridCell.Tab.0.bottom" timestamp="1583964326970">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583662791971" />
+    <state width="2517" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3044.-2160.2560.1400@-3044.-2160.2560.1400" timestamp="1583890014374" />
+    <state width="1877" height="298" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583964326970" />
     <state width="1877" height="298" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583520021157" />
     <state width="1877" height="298" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583455173619" />
-    <state width="1877" height="298" key="GridCell.Tab.0.center" timestamp="1583662791971">
+    <state width="1877" height="298" key="GridCell.Tab.0.center" timestamp="1583964326969">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.0.center/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583662791971" />
+    <state width="2517" height="262" key="GridCell.Tab.0.center/0.0.1920.1040/-3044.-2160.2560.1400@-3044.-2160.2560.1400" timestamp="1583890014373" />
+    <state width="1877" height="298" key="GridCell.Tab.0.center/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583964326969" />
     <state width="1877" height="298" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583520021157" />
     <state width="1877" height="298" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583455173619" />
-    <state width="1877" height="298" key="GridCell.Tab.0.left" timestamp="1583662791971">
+    <state width="1877" height="298" key="GridCell.Tab.0.left" timestamp="1583964326969">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.0.left/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583662791971" />
+    <state width="2517" height="262" key="GridCell.Tab.0.left/0.0.1920.1040/-3044.-2160.2560.1400@-3044.-2160.2560.1400" timestamp="1583890014373" />
+    <state width="1877" height="298" key="GridCell.Tab.0.left/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583964326969" />
     <state width="1877" height="298" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583520021157" />
     <state width="1877" height="298" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583455173619" />
-    <state width="1877" height="298" key="GridCell.Tab.0.right" timestamp="1583662791971">
+    <state width="1877" height="298" key="GridCell.Tab.0.right" timestamp="1583964326970">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.0.right/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583662791971" />
+    <state width="2517" height="262" key="GridCell.Tab.0.right/0.0.1920.1040/-3044.-2160.2560.1400@-3044.-2160.2560.1400" timestamp="1583890014374" />
+    <state width="1877" height="298" key="GridCell.Tab.0.right/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583964326970" />
     <state width="1877" height="298" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583520021157" />
     <state width="1877" height="298" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583455173619" />
-    <state width="1877" height="342" key="GridCell.Tab.1.bottom" timestamp="1583451232641">
+    <state width="1877" height="262" key="GridCell.Tab.1.bottom" timestamp="1583948280085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="342" key="GridCell.Tab.1.bottom/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583387715815" />
+    <state width="2517" height="262" key="GridCell.Tab.1.bottom/0.0.1920.1040/-3044.-2160.2560.1400@-3044.-2160.2560.1400" timestamp="1583890014374" />
+    <state width="1877" height="262" key="GridCell.Tab.1.bottom/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583948280085" />
     <state width="1877" height="342" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583451232641" />
     <state width="1877" height="342" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583381542065" />
-    <state width="1877" height="342" key="GridCell.Tab.1.center" timestamp="1583451232641">
+    <state width="1877" height="262" key="GridCell.Tab.1.center" timestamp="1583948280085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="342" key="GridCell.Tab.1.center/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583387715815" />
+    <state width="2517" height="262" key="GridCell.Tab.1.center/0.0.1920.1040/-3044.-2160.2560.1400@-3044.-2160.2560.1400" timestamp="1583890014374" />
+    <state width="1877" height="262" key="GridCell.Tab.1.center/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583948280085" />
     <state width="1877" height="342" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583451232641" />
     <state width="1877" height="342" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583381542065" />
-    <state width="1877" height="342" key="GridCell.Tab.1.left" timestamp="1583451232641">
+    <state width="1877" height="262" key="GridCell.Tab.1.left" timestamp="1583948280085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="342" key="GridCell.Tab.1.left/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583387715815" />
+    <state width="2517" height="262" key="GridCell.Tab.1.left/0.0.1920.1040/-3044.-2160.2560.1400@-3044.-2160.2560.1400" timestamp="1583890014374" />
+    <state width="1877" height="262" key="GridCell.Tab.1.left/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583948280085" />
     <state width="1877" height="342" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583451232641" />
     <state width="1877" height="342" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583381542065" />
-    <state width="1877" height="342" key="GridCell.Tab.1.right" timestamp="1583451232641">
+    <state width="1877" height="262" key="GridCell.Tab.1.right" timestamp="1583948280085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="342" key="GridCell.Tab.1.right/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583387715815" />
+    <state width="2517" height="262" key="GridCell.Tab.1.right/0.0.1920.1040/-3044.-2160.2560.1400@-3044.-2160.2560.1400" timestamp="1583890014374" />
+    <state width="1877" height="262" key="GridCell.Tab.1.right/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583948280085" />
     <state width="1877" height="342" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583451232641" />
     <state width="1877" height="342" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583381542065" />
     <state x="490" y="178" key="Maven.ArtifactSearchDialog" timestamp="1583261270922">
@@ -306,6 +350,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="97" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583435143621" />
+    <state width="960" height="520" key="XDebugger.FullValuePopup" timestamp="1583733313284">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="960" height="520" key="XDebugger.FullValuePopup/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583733313284" />
     <state x="776" y="301" key="chooseDestDirectoryDialog" timestamp="1582153542232">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -322,5 +370,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="173" width="670" height="676" key="search.everywhere.popup/0.0.1920.1040/-3044.-2160.2560.1400@0.0.1920.1040" timestamp="1583168875063" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tests/UserManagmentTest.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

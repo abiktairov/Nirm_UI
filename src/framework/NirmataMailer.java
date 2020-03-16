@@ -45,30 +45,6 @@ public class NirmataMailer {
         session = Session.getDefaultInstance(props, null);
     }
 
-//    public String getAccessCode(Date testStartTime, int waitingTime_sec, int forcingTime_sec) {
-//        final long TIMESHIFT = 2000; // to smooth out a possible bias between test host and mail host
-//        String checkFrom = "support@nirmata.com";
-//        String checkSubj = "Your Nirmata Account";
-//        String pattern = "(?<=Access code:)?([0-9]{6})";
-//        ArrayList<ShortMessage> messages;
-//        boolean found;
-//        String result = "";
-//
-//        do {
-//            messages = getMessagesBy(checkFrom, checkSubj);
-//            found = (messages.size() > 0 && messages.get(0).sentDate.getTime() > testStartTime.getTime() - TIMESHIFT);
-//            if (!found) try {Thread.sleep(waitingTime_sec * 100);} catch (InterruptedException e) {e.printStackTrace();}
-//        } while (!found && testStartTime.getTime() + waitingTime_sec * 1000 > new Date().getTime());
-//
-//        if (messages.size() > 0 &&
-//                (found || (
-//                        forcingTime_sec > 0 &&
-//                                messages.get(0).sentDate.getTime() > testStartTime.getTime() - forcingTime_sec * 1000 - TIMESHIFT)))
-//            result = parseMessage(messages.get(0).messageBody, pattern);
-//
-//        return result;
-//    }
-
     public String getAccessCode(Date testStartTime, int waitingTime_sec, int forcingTime_sec) {
         String checkFrom = "support@nirmata.com";
         String checkSubj = "Your Nirmata Account";
@@ -76,18 +52,18 @@ public class NirmataMailer {
         return getPatternFromEmail(checkFrom, checkSubj, pattern, testStartTime, waitingTime_sec, forcingTime_sec);
     }
 
-    public String getPasswordResetLink(Date testStartTime, int waitingTime_sec, int forcingTime_sec) {
+    public String getPasswordResetLink(String appURL, Date testStartTime, int waitingTime_sec, int forcingTime_sec) {
         String checkFrom = "support@nirmata.com";
         String checkSubj = "Your Nirmata Account";
-        String query = "https://www.nirmata.io/security/setPassword.html?action=reset&token=";
+        String query = appURL + "security/setPassword.html?action=reset&token=";
         String pattern = "(?<=" + query + ")?(\\w{144})";
         return query + getPatternFromEmail(checkFrom, checkSubj, pattern, testStartTime, waitingTime_sec, forcingTime_sec);
     }
 
-    public String getActivationLink(Date testStartTime, int waitingTime_sec, int forcingTime_sec) {
+    public String getActivationLink(String appURL, Date testStartTime, int waitingTime_sec, int forcingTime_sec) {
         String checkFrom = "support@nirmata.com";
         String checkSubj = "Welcome to Nirmata!";
-        String query = "https://www.nirmata.io/security/setPassword.html?action=activate&token=";
+        String query = appURL + "security/setPassword.html?action=activate&token=";
         String pattern = "(?<=" + query + ")?(\\w{144})";
         return query + getPatternFromEmail(checkFrom, checkSubj, pattern, testStartTime, waitingTime_sec, forcingTime_sec);
     }
